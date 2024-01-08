@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: url();
+  background-position: center;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 5rem;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+main {
+  flex: 1;
+  display: flex;
+}
+
+main aside {
+  flex: 1;
+  padding-bottom: 10px;
+
+  display: flex;
+
+  justify-content: center;
+
+  border: 1px solid blue;
+}
+
+main aside ul {
+  list-style-type: none;
+  width: 80%;
+  margin: 0px 16px;
+}
+
+main aside li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.7s;
+  margin-top: 10px;
+  text-align: right;
+}
+
+main aside li:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+main section {
+  background-image: url();
+  flex: 4;
+  justify-content: center;
+}
+
+main section article {
+  height: 705px;
+  justify-content: center;
+  display: flex;
+}
+
+main article div {
+  padding-bottom: 0;
+  flex: 1;
+}
+
+article div div {
+  height: 350px;
+}
+
+aside ul li {
+  display: flex;
+}
+
+aside ul li img {
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  margin-right: 100px;
+}
+a {
+  flex: 1;
+  text-align: right;
+  margin-top: 100px;
+  flex-wrap: nowrap;
+}
+
+/* 회원 창 */
+
+article.user {
+  display: flex;
+}
+article.user div {
+  margin: 5px;
+  padding: 5px;
+}
+
+/*공지사항 창*/
+
+img.box {
+  width: 100%;
+  height: max-content;
+  object-fit: cover;
+}
