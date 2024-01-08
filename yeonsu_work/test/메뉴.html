@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반려동물</title>
+    <style>
+      /*초기화코드*/
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        height: 90vh;
+      }
+      body {
+        height: 100%;
+      }
+      /*초기화코드 End*/
+
+      /*헤더 어플이름*/
+      header {
+        background-color: rgb(255, 215, 95);
+        text-align: center;
+        padding: 25px;
+      }
+      /* end 헤더 */
+      /* @@@@@@@일반메뉴 CSS @@@@@@@ */
+      ul.MENU {
+        padding: 10px;
+        background-color: orange;
+        display: flex;
+      }
+      ul.MENU li {
+        margin: 0 10px;
+        font-weight: bold;
+      }
+      ul.MENU li:hover {
+        cursor: pointer;
+        /* background-color: rgb(255, 205, 113); */
+        color: white;
+      }
+
+      /* @@@@@@@일반메뉴 CSS END@@@@@@@ */
+
+      /* ********** 동물목록************ */
+      li {
+        list-style: none;
+      }
+      #gnb li ul {
+        display: none;
+      }
+      #gnb > li:hover > a {
+        /* border-bottom: 3px solid red; */
+        background-color: blueviolet;
+        /*나중엔 사진을 넣을거니까 opacity 가좋을듯*/
+      }
+      #gnb li:hover ul {
+        display: block;
+        border: 1px solid blue;
+      }
+      #gnb li ul li:hover a {
+        /* border-bottom: 3px solid pink; */
+        background-color: pink;
+      }
+      ul li ul li {
+        margin-left: 30px;
+      }
+
+      h4 {
+        margin: 10px;
+        width: 100px;
+        text-align: center;
+        padding: 10px;
+        border: solid black;
+        border-radius: 50px;
+      }
+      /* *************end 동물목록 *********  */
+    </style>
+  </head>
+  <body>
+    <header><h1>반려동물 백서</h1></header>
+    <!-- @@@@@@@일반메뉴@@@@@@@ -->
+    <ul class="MENU">
+      <li>자유게시판</li>
+      <li>로그인</li>
+      <li>회원가입</li>
+    </ul>
+    <!-- @@@@@@@일반메뉴 end@@@@@@@ -->
+    <!-- ********동물메뉴***** -->
+    <div class="dropdown_menu">
+      <ul id="gnb">
+        <h4>menu</h4>
+        <li>
+          <a href="#">메뉴1</a>
+          <!--서브메뉴1-->
+          <ul class="sub_menu">
+            <li><a href="#">동물1</a></li>
+            <li><a href="#">동물2</a></li>
+            <li><a href="#">동물3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴2</a>
+          <!--서브메뉴2-->
+          <ul class="sub_menu">
+            <li><a href="#">동물1</a></li>
+            <li><a href="#">동물2</a></li>
+            <li><a href="#">동물3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴3</a>
+          <!--서브메뉴3-->
+          <ul class="sub_menu">
+            <li><a href="#">동물1</a></li>
+            <li><a href="#">동물2</a></li>
+            <li><a href="#">동물3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴4</a>
+          <!--서브메뉴3-->
+          <ul class="sub_menu">
+            <li><a href="#">동물1</a></li>
+            <li><a href="#">동물2</a></li>
+            <li><a href="#">동물3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">메뉴5</a>
+          <!--서브메뉴3-->
+          <ul class="sub_menu">
+            <li><a href="#">동물1</a></li>
+            <li><a href="#">동물2</a></li>
+            <li><a href="#">동물3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- ********동물메뉴 끝***** -->
+  </body>
+</html>

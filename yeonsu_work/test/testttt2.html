@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #mouse-over-label:hover ~ .menubars {
+        display: block;
+      }
+      .menubars {
+        display: none;
+      }
+
+      ul li {
+        list-style: none;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <label id="mouse-over-label">여기에마우스</label>
+    <ul class="menubars">
+      <li><img src="images\이미지01.jpg" alt="i1" /></li>
+      <!-- 근데 올리면사라지네-->
+      <li><img src="images\이미지02.jpg" alt="i2" /></li>
+      <li><img src="images\이미지03.jpg" alt="i3" /></li>
+    </ul>
+  </body>
+</html>
