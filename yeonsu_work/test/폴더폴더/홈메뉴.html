@@ -6,6 +6,8 @@
     <title>반려동물</title>
     <!--이걸먼저적용시켜서 안무너지게-->
     <link rel="stylesheet" href="./check.css" />
+    <!-- 아이콘js주소 -->
+    <script src="https://kit.fontawesome.com/9b331147db.js" crossorigin="anonymous"></script>
     <style>
       /*초기화코드*/
       * {
@@ -25,7 +27,7 @@
       header {
         background-color: #ffdf6a;
         text-align: center;
-        padding: 25px;
+        padding: 30px;
       }
       a.ha {
         text-decoration: none;
@@ -48,6 +50,7 @@
       ul.MENU li {
         margin: 0 10px;
         font-weight: bold;
+        transition: 0.7s;
       }
       ul.MENU li:hover {
         cursor: pointer;
@@ -75,7 +78,7 @@
       }
       #gnb li ul li:hover a {
         /* border-bottom: 3px solid pink; */
-        background-color: rgb(167, 35, 57);
+        background-color: rgb(251, 5, 255);
       }
       ul li ul li {
         margin-left: 100px;
@@ -99,13 +102,17 @@
       div.dropdown_menu {
         position: left; /*이목록은 항상 왼쪽에두게..*/
         border: 3px solid black;
-        margin: 10px 10px 0 0; /*섹션이랑 안붙게 위랑좀띄우고*/
+        margin: 10px 10px 0 10px; /*섹션이랑 안붙게 위랑좀띄우고, 왼쪽도살짝*/
         padding-right: 10px; /* 설치류 글자랑 안붙게 좀밀고*/
-      }
+       
+              }
 
-      a.notwhitespace {
-        /* ~류 안찌그러지게 */
+      .notwhitespace {
+        /* 동물이름 안찌그러지게 */
         white-space: nowrap;
+        text-decoration: none; /* 줄떼고 */
+        color: black;
+        font-weight: bold;
       }
       /* ************* end 동물목록 *********  */
       /* 영역구분 */
@@ -116,15 +123,17 @@
         flex: auto;
         border: 3px solid rgb(0, 0, 0);
         margin-top: 10px; /* 동물메뉴랑 똑같이 메뉴에서 10xp 띄우고 */
+        margin-right: 10px; /* 오른쪽에 너무 딱붙지않게 */
         display: flex; /*article 두개 나란히 섹션안에*/
         flex-direction: column;
       }
       /* 영역구분 end*/
       section article {
-        margin: 15px;
+        margin: 10px;
         flex: 1;
         border: 3px solid rgb(81, 255, 0);
       }
+      
     </style>
     <!--checklist js-->
     <script src="check.js"></script>
@@ -142,7 +151,7 @@
       <li>자유게시판</li>
       <li>공지사항</li>
       <li>로그인</li>
-      <li>회원가입</li>
+      <li>회원가입<i class="fas fa-solid fa-user-plus"></i></li>
     </ul>
     <!-- @@@@@@@일반메뉴 end@@@@@@@ -->
     <!-- ********동물메뉴***** -->
@@ -151,13 +160,13 @@
         <ul id="gnb">
           <h4>animals</h4>
           <li>
-            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" />설치류</a>
+            <a class="notwhitespace"><img class="b_animal" src="/animal/설치류.png" alt="설치류" />설치류</a>
             <!--서브메뉴1-->
-            <ul class="sub_menu">
+            <ul class="sub_menu notwhitespace">
               <li>
                 <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물1
               </li>
-              <li>
+              <li >
                 <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물2
               </li>
               <li>
@@ -166,9 +175,9 @@
             </ul>
           </li>
           <li>
-            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/어류.png" alt="어류" />어류</a>
+            <a class="notwhitespace"><img class="b_animal" src="/animal/어류.png" alt="어류" />어류</a>
             <!--서브메뉴2-->
-            <ul class="sub_menu">
+            <ul class="sub_menu notwhitespace">
               <li>
                 <a href="#"><img class="b_animal" src="/animal/어류.png" alt="어류" /></a>동물1
               </li>
@@ -181,9 +190,9 @@
             </ul>
           </li>
           <li>
-            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/조류.png" alt="조류" />조류</a>
+            <a class="notwhitespace"><img class="b_animal" src="/animal/조류.png" alt="조류" />조류</a>
             <!--서브메뉴3-->
-            <ul class="sub_menu">
+            <ul class="sub_menu notwhitespace">
               <li>
                 <a href="#"><img class="b_animal" src="/animal/조류.png" alt="조류" /></a>동물1
               </li>
@@ -196,9 +205,9 @@
             </ul>
           </li>
           <li>
-            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/파충류.png" alt="파충류" />파충류</a>
+            <a class="notwhitespace"><img class="b_animal" src="/animal/파충류.png" alt="파충류" />파충류</a>
             <!--서브메뉴3-->
-            <ul class="sub_menu">
+            <ul class="sub_menu notwhitespace">
               <li>
                 <a href="#"><img class="b_animal" src="/animal/파충류.png" alt="파충류" /></a>동물1
               </li>
@@ -211,9 +220,9 @@
             </ul>
           </li>
           <li>
-            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/포유류.png" alt="포유류" />포유류</a>
+            <a class="notwhitespace"><img class="b_animal" src="/animal/포유류.png" alt="포유류" />포유류</a>
             <!--서브메뉴3-->
-            <ul class="sub_menu">
+            <ul class="sub_menu notwhitespace">
               <li>
                 <a href="#"><img class="b_animal" src="/animal/포유류.png" alt="포유류" /></a>동물1
               </li>
@@ -232,9 +241,9 @@
       <section>
         <!--산책하기~같은 체크리스트-->
         <article>
-          <p class="checklist"><strong>CheckList</strong></p>
-          <section class="input"><input placeholder="할일입력" /> <button>추가</button></section>
-          <section class="list">
+          <h3 class="checklist"><strong><i class="fas fa-light fa-calendar"></i>CheckList</strong></h3>
+          <section class="input ckcss"><input placeholder="할일입력"  /><button>추가<i class="fas fa-solid fa-feather"></i></button></section>
+          <section class="list ckcss">
             <ul></ul>
           </section>
           <!--input 섹션2개 end-->

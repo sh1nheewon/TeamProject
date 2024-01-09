@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ulContent = document.querySelector("section.list ul");
   const todoInput = document.querySelector("section.input input");
   // 3개의 요소를 갖는 리스트 만들기
-  const todoList = ["산책시키기", "목욕시키기", "발톱깎아주기", "털빗어주기"];
+  const todoList = ["산책시키기", "목욕시키기", "발톱깎아주기", "털빗어주기","밥주기"];
 
   const createLiTag = (todoContent) => {
     // <span></span>  // span 태그를 만들어라

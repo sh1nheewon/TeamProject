@@ -1,7 +1,9 @@
-section {
+.ckcss {
   width: 95%;
-  margin: 5px auto;
-  border: 5px solid #ddd;
+  margin: 10px auto;
+  border: 3px solid #00dad6;
+ 
+
 }
 section.input {
   padding: 10px;
@@ -20,21 +22,25 @@ section.input input {
   font-size: 1.2rem;
 }
 section.input input:hover {
-  background-color: #e7bdbd;
+  background-color: #fff8b4;
 }
 section.input input:focus {
-  border: 2px solid greenyellow;
+  border: 2px solid orange;
 }
 section.input button {
+  margin-top: 7px; /* 입력칸이랑 거리주기 */
+  height: 30px;
+  
   padding: 0 40px;
   border: none;
   border-radius: 20px;
   white-space: none; /* 화면이 줄어들었을때 글자가 접히지않음 */
+  background-color: #00dad6;
+  font-weight: bold;
 }
 section.list {
   flex: 1;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+ 
   margin-top: 0px;
 }
 section.list ul {
@@ -42,7 +48,7 @@ section.list ul {
 }
 section.list li {
   cursor: pointer;
-  background-color: #eee;
+  background-color: #fff3af;
   font-size: 1.2rem;
   /* 클릭했을때 글자 블럭쌓아지지않게 / 작성할때 줄그어지면 안써도되는것 */
   /* Browser 호환성 위한 설정 */
@@ -56,17 +62,17 @@ section.list li {
 }
 section.list li:nth-of-type(odd) {
   /* odd 는 홀수. 홀수만 색바꾸기 (짝수는 even) */
-  background-color: #f9f9f9;
+  background-color: #c5fffa;
 }
 section.list li:hover {
-  background-color: #ddd;
+  background-color: #ffd2e6;
 }
 section.list li.complete {
-  background-color: #ccc;
+  background-color: #9f9f9f;
 }
 section.list li.complete span.todo {
   text-decoration: line-through; /* 글자위에 줄긋기 */
-  color: #ddd;
+  color: #bebebe;
 }
 /*
   li tag에 complete class 가 없으면
@@ -90,10 +96,18 @@ span.close {
   font-size: 1.2rem;
 }
 span.close:hover {
-  background-color: green;
+  color: red;
+  background-color: orange;
   padding: 0 5px;
 }
 
-p.checklist {
+h3.checklist {
   text-align: center;
+  
+}
+.fa-calendar { /* 아이콘 옆으로띄우기 */
+  margin-right: 5px;
+}
+.fa-user-plus,.fa-feather {
+  margin-left: 5px;
 }
