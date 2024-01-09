@@ -21,15 +21,18 @@
 
       /*헤더 어플이름*/
       header {
-        background-color: rgb(207, 208, 208);
+        background-color: #ffdf6a;
         text-align: center;
         padding: 25px;
+      }
+      header:hover {
+        cursor: pointer;
       }
       /* end 헤더 */
       /* @@@@@@@일반메뉴 CSS @@@@@@@ */
       ul.MENU {
         padding: 10px;
-        background-color: rgb(145, 152, 159);
+        background-color: #00dad6;
         display: flex;
         justify-content: flex-end; /* 오른쪽끝으로 */
       }
@@ -83,7 +86,9 @@
         height: 100px;
         border: 3px solid black;
         border-radius: 50%;
-
+      }
+      div.dropdown_menu {
+        position: left; /*이목록은 항상 왼쪽에두게..*/
       }
       /* ************* end 동물목록 *********  */
     </style>
@@ -93,6 +98,7 @@
     <!-- @@@@@@@일반메뉴@@@@@@@ -->
     <ul class="MENU">
       <li>자유게시판</li>
+      <li>공지사항</li>
       <li>로그인</li>
       <li>회원가입</li>
     </ul>
@@ -102,48 +108,54 @@
       <ul id="gnb">
         <h4>menu</h4>
         <li>
-          <a href="#"><img class ="b_animal" src="/animal/설치류.png" alt="설치류">설치류</a>
+          <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" />설치류</a>
           <!--서브메뉴1-->
           <ul class="sub_menu">
-            <li><a href="#"><img class ="b_animal" src="/animal/설치류.png" alt="동물1">동물1</a></li>
-            <li><a href="#"><img class ="b_animal" src="/animal/설치류.png" alt="설치류">동물2</a></li>
-            <li><a href="#"><img class ="b_animal" src="/animal/설치류.png" alt="설치류">동물3</a></li>
+            <li>
+              <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물1
+            </li>
+            <li>
+              <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물2
+            </li>
+            <li>
+              <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물3
+            </li>
           </ul>
         </li>
         <li>
-          <a href="#"><img class ="b_animal" src="/animal/어류.png" alt="어류">어류</a>
+          <a href="#"><img class="b_animal" src="/animal/어류.png" alt="어류" />어류</a>
           <!--서브메뉴2-->
           <ul class="sub_menu">
-            <li><a href="#">동물1</a></li>
-            <li><a href="#">동물2</a></li>
-            <li><a href="#">동물3</a></li>
+            <li><a href="#"></a>동물1</li>
+            <li><a href="#"></a>동물2</li>
+            <li><a href="#"></a>동물3</li>
           </ul>
         </li>
         <li>
-          <a href="#"><img class ="b_animal" src="/animal/조류.png" alt="조류">조류</a>
+          <a href="#"><img class="b_animal" src="/animal/조류.png" alt="조류" />조류</a>
           <!--서브메뉴3-->
           <ul class="sub_menu">
-            <li><a href="#">동물1</a></li>
-            <li><a href="#">동물2</a></li>
-            <li><a href="#">동물3</a></li>
+            <li><a href="#"></a>동물1</li>
+            <li><a href="#"></a>동물2</li>
+            <li><a href="#"></a>동물3</li>
           </ul>
         </li>
         <li>
-          <a href="#"><img class ="b_animal" src="/animal/파충류.png" alt="파충류">파충류</a>
+          <a href="#"><img class="b_animal" src="/animal/파충류.png" alt="파충류" />파충류</a>
           <!--서브메뉴3-->
           <ul class="sub_menu">
-            <li><a href="#">동물1</a></li>
-            <li><a href="#">동물2</a></li>
-            <li><a href="#">동물3</a></li>
+            <li><a href="#"></a>동물1</li>
+            <li><a href="#"></a>동물2</li>
+            <li><a href="#"></a>동물3</li>
           </ul>
         </li>
         <li>
-          <a href="#"><img class ="b_animal" src="/animal/포유류.png" alt="포유류">포유류</a>
+          <a href="#"><img class="b_animal" src="/animal/포유류.png" alt="포유류" />포유류</a>
           <!--서브메뉴3-->
           <ul class="sub_menu">
-            <li><a href="#">동물1</a></li>
-            <li><a href="#">동물2</a></li>
-            <li><a href="#">동물3</a></li>
+            <li><a href="#"></a>동물1</li>
+            <li><a href="#"></a>동물2</li>
+            <li><a href="#"></a>동물3</li>
           </ul>
         </li>
       </ul>
