@@ -42,9 +42,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
       }
       /* HOME만 왼쪽으로 */
       ul.MENU li:first-child {
@@ -133,31 +130,8 @@
       section article {
         margin: 10px;
         flex: 1;
-        border: 3px solid #94e65e;
+        border: 3px solid rgb(81, 255, 0);
       }
-      /* 알림 */
-      ul.alrim {
-        margin: 5px 5px 0 5px;
-        border: 3px solid rgb(0, 0, 0);
-        border-radius: 20px;
-      }
-      @keyframes alrim_slide {
-        0% {
-          transform: translateX(75%);
-        }
-        100% {
-          /* div.image_list 의 width * (-1) */
-          transform: translateX(1%);
-        }
-      }
-      li.alrim {
-        animation: alrim_slide 5s linear infinite;
-      }
-      li.alrim a {
-        text-decoration: none;
-        color: black;
-      }
-      /* 알림 end */
     </style>
     <!--checklist js-->
     <script src="check.js"></script>
@@ -166,30 +140,18 @@
   <body>
     <!-- header 눌러서 홈으로 가게-->
     <a class="ha" href="#">
-      <header>
-        <h1>반려동물 백서<i class="fa-solid fa-book"></i></h1>
-      </header>
+      <header><h1>반려동물 백서</h1></header>
     </a>
 
     <!-- @@@@@@@일반메뉴@@@@@@@ -->
     <ul class="MENU">
-      <li>HOME<i class="fa-solid fa-house"></i></li>
-      <li>자유게시판<i class="fa-solid fa-comment"></i></li>
-      <li>공지사항<i class="fa-solid fa-thumbtack"></i></li>
-      <li>로그인<i class="fa-solid fa-arrow-right"></i></li>
+      <li>HOME</li>
+      <li>자유게시판</li>
+      <li>공지사항</li>
+      <li>로그인</li>
       <li>회원가입<i class="fas fa-solid fa-user-plus"></i></li>
     </ul>
     <!-- @@@@@@@일반메뉴 end@@@@@@@ -->
-
-    <!-- 소식 -->
-    <ul class="alrim">
-      <li class="alrim">
-        <a href="https://vpet.co.kr/category/%ED%8C%8C%EC%86%90%EC%9C%A0%ED%86%B5%EA%B8%B0%ED%95%9C%EC%9E%84%EB%B0%95/441/" target="new"
-          ><i class="fa-solid fa-bell"></i><strong>파손/임박 상품 세일중 ▶ 브이펫 바로가기</strong></a
-        ><i class="fa-solid fa-bell"></i>
-      </li>
-    </ul>
-    <!-- 소식 end-->
     <!-- ********동물메뉴***** -->
     <div class="nanugi">
       <div class="dropdown_menu">
@@ -274,7 +236,7 @@
       </div>
       <!-- ********동물메뉴 끝***** -->
       <!-- ****이 섹션이 이제 화면전환시 변할곳 -->
-      <section class="hwamyeon">
+      <section>
         <!--산책하기~같은 체크리스트-->
         <article>
           <h3 class="checklist">
@@ -288,7 +250,7 @@
           </section>
           <!--input 섹션2개 end-->
         </article>
-        <article>뭐하지</article>
+        <article>공지사항</article>
       </section>
     </div>
     <!--나누기용div-->

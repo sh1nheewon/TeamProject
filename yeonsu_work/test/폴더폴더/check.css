@@ -2,8 +2,6 @@
   width: 95%;
   margin: 10px auto;
   border: 3px solid #00dad6;
- 
-
 }
 section.input {
   padding: 10px;
@@ -30,7 +28,7 @@ section.input input:focus {
 section.input button {
   margin-top: 7px; /* 입력칸이랑 거리주기 */
   height: 30px;
-  
+
   padding: 0 40px;
   border: none;
   border-radius: 20px;
@@ -40,7 +38,7 @@ section.input button {
 }
 section.list {
   flex: 1;
- 
+
   margin-top: 0px;
 }
 section.list ul {
@@ -103,11 +101,24 @@ span.close:hover {
 
 h3.checklist {
   text-align: center;
-  
 }
-.fa-calendar { /* 아이콘 옆으로띄우기 */
+/* 아이콘들 */
+.fa-calendar,
+.fa-bell {
+  /* 아이콘 옆으로띄우기 */
   margin-right: 5px;
 }
-.fa-user-plus,.fa-feather {
+.fa-user-plus,
+.fa-feather,
+.fa-thumbtack,
+.fa-comment,
+.fa-arrow-right,
+.fa-house,
+.fa-book,
+.fa-bell {
   margin-left: 5px;
 }
+.fa-bell {
+  color: orange;
+}
+/* 아이콘 end */
