@@ -66,7 +66,7 @@ section.list li:hover {
   background-color: #ffd2e6;
 }
 section.list li.complete {
-  background-color: #9f9f9f;
+  background-color: #e7dddd;
 }
 section.list li.complete span.todo {
   text-decoration: line-through; /* 글자위에 줄긋기 */
@@ -104,7 +104,9 @@ h3.checklist {
 }
 /* 아이콘들 */
 .fa-calendar,
-.fa-bell {
+.fa-bell,
+.fa-book-medical,
+.fa-magnifying-glass {
   /* 아이콘 옆으로띄우기 */
   margin-right: 5px;
 }
@@ -115,7 +117,8 @@ h3.checklist {
 .fa-arrow-right,
 .fa-house,
 .fa-book,
-.fa-bell {
+.fa-bell,
+.fa-magnifying-glass {
   margin-left: 5px;
 }
 .fa-bell {
