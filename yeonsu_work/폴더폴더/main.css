@@ -1,5 +1,5 @@
- /*초기화코드*/
- * {
+/*초기화코드*/
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -9,6 +9,7 @@ html {
 }
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 /*초기화코드 End*/
 
@@ -81,16 +82,16 @@ li {
 }
 #gnb > li:hover > a {
   /* border-bottom: 3px solid red; */
-  background-color: blueviolet;
+  background-color: inherit;
   /*나중엔 사진을 넣을거니까 opacity 가좋을듯*/
 }
 #gnb li:hover ul {
   display: block;
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
 }
 #gnb li ul li:hover a {
   /* border-bottom: 3px solid pink; */
-  background-color: rgb(251, 5, 255);
+  background-color: inherit;
 }
 ul li ul li {
   margin-left: 100px;
@@ -127,7 +128,6 @@ div.dropdown_menu {
 }
 .anima:hover {
   opacity: 0.6;
-
 }
 /* ************* end 동물목록 *********  */
 /* 영역구분 */
@@ -146,7 +146,6 @@ section {
 section article {
   margin: 10px;
   flex: 1;
-  
 }
 /* 알림 */
 ul.alrim {
@@ -176,7 +175,6 @@ div.site {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  
 }
 div.site a {
   flex: 1;
@@ -193,6 +191,6 @@ img.pawin {
   width: 50px;
   height: 50px;
 }
-p.psite{
+p.psite {
   text-align: center;
 }
