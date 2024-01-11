@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        height: 100vh;
+      }
+      body {
+        height: 100%;
+      }
+      header {
+        border: 10px solid rgb(100, 100, 100);
+        text-align: center;
+        padding: 10px;
+      }
+      section {
+        margin-top: 10px;
+        display: flex;
+        border: 3px solid rgb(0, 0, 0);
+        height: 90vh;
+      }
+      article {
+        flex: 1;
+        border: 3px solid #969696;
+        height: 98%;
+        padding: 50px;
+        margin: 5px;
+      }
+      article .p {
+        /*아이콘*/
+        height: 80px;
+        width: 80px;
+        background-color: rgb(133, 133, 133);
+        margin: 10px;
+        border-radius: 50%;
+        text-align: center;
+      }
+      article p.p2 {
+        text-align: center;
+        height: 100px;
+        width: 200px;
+        background-color: #777;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+      .d2 {
+        border: 2px solid gray;
+        padding: 10px;
+        margin: 5px;
+      }
+      article p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>(어플이름)</h1>
+    </header>
+    <section>
+      <article class="menu">
+        <div class="d3">
+          <p class="p"></p>
+          <p>포유류</p>
+        </div>
+        <p class="p"></p>
+        <p>파충류</p>
+        <p class="p"></p>
+        <p>설치류</p>
+        <p class="p"></p>
+        <p>어류</p>
+        <p class="p"></p>
+        <p>조류</p>
+      </article>
+      <article class="a1"><p></p></article>
+      <article class="a2">
+        <div>
+          <p class="p2">공지사항</p>
+          <div class="d2">
+            <p>ID</p>
+            <input login />
+            <p>PASSWARD</p>
+            <input passward />
+          </div>
+          <img src="cat.jpg" alt="프로필이미지" />
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
