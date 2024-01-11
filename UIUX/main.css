@@ -22,7 +22,9 @@ header {
   color: white;
   background-color: black;
 }
-
+div {
+  /* border: 1px solid red; */
+}
 main {
   flex: 1;
   display: flex;
@@ -36,7 +38,7 @@ main aside {
 
   justify-content: center;
 
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 main aside ul {
@@ -62,21 +64,17 @@ main section {
   background-image: url();
   flex: 4;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 main section article {
-  height: 705px;
-  justify-content: center;
+  flex: 1;
   display: flex;
 }
 
 main article div {
-  padding-bottom: 0;
   flex: 1;
-}
-
-article div div {
-  height: 350px;
 }
 
 aside ul li {
@@ -99,17 +97,75 @@ a {
 /* 회원 창 */
 
 article.user {
-  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 article.user div {
   margin: 5px;
   padding: 5px;
 }
+form {
+  text-align: center;
+  margin-left: 5px;
+}
+article button,
+input {
+  display: inline-block;
+}
+div.user {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
 
 /*공지사항 창*/
 
 img.box {
-  width: 100%;
-  height: max-content;
-  object-fit: cover;
+  padding: 1.2rem;
+  margin: 15px;
+  width: 500px;
+  height: 300px;
+}
+
+/*메[모*/
+
+.postit {
+  border: 1px solid gray;
+  font-size: 16px;
+  width: 300px;
+  height: 300px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  background-color: #ffcc00;
+  color: black;
+  padding-top: 15px;
+
+  margin: 50px auto;
+}
+
+.postit input {
+  padding: 5px;
+  height: 30px;
+  width: 300px;
+  background-color: inherit;
+  border: 1px solid #ffcc00;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+.postit:hover::before {
+  border-bottom: 15px solid dodgerblue;
+}
+
+.postit::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  border-bottom: 15px solid gray;
+  border-left: 15px solid rgba(0, 0, 0, 0);
 }
