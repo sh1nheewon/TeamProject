@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반려동물</title>
+    <style>
+      /*초기화코드*/
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        height: 90vh;
+      }
+      body {
+        height: 100%;
+      }
+      /*초기화코드 End*/
+
+      /*헤더 어플이름*/
+      header {
+        background-color: #ffdf6a;
+        text-align: center;
+        padding: 25px;
+      }
+      a.ha {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* end 헤더 */
+      /* @@@@@@@일반메뉴 CSS @@@@@@@ */
+      ul.MENU {
+        padding: 10px;
+        background-color: #00dad6;
+        display: flex;
+        justify-content: flex-end; /* 오른쪽끝으로 */
+      }
+      /* HOME만 왼쪽으로 */
+      ul.MENU li:nth-of-type(1) {
+        justify-content: left;
+      }
+      ul.MENU li {
+        margin: 0 10px;
+        font-weight: bold;
+      }
+      ul.MENU li:hover {
+        cursor: pointer;
+        /* background-color: rgb(255, 205, 113); */
+        color: white;
+      }
+
+      /* @@@@@@@일반메뉴 CSS END@@@@@@@ */
+
+      /* ********** 동물목록************ */
+      li {
+        list-style: none;
+      }
+      #gnb li ul {
+        display: none;
+      }
+      #gnb > li:hover > a {
+        /* border-bottom: 3px solid red; */
+        background-color: blueviolet;
+        /*나중엔 사진을 넣을거니까 opacity 가좋을듯*/
+      }
+      #gnb li:hover ul {
+        display: block;
+        border: 3px solid blue;
+      }
+      #gnb li ul li:hover a {
+        /* border-bottom: 3px solid pink; */
+        background-color: rgb(167, 35, 57);
+      }
+      ul li ul li {
+        margin-left: 100px;
+      }
+
+      h4 {
+        margin: 10px;
+        width: 100px;
+        text-align: center;
+        padding: 10px;
+        border: solid black;
+        border-radius: 50px;
+      }
+      img.b_animal {
+        margin: 5px 0 15px 10px;
+        width: 100px;
+        height: 100px;
+        border: 3px solid black;
+        border-radius: 50%;
+      }
+      div.dropdown_menu {
+        position: left; /*이목록은 항상 왼쪽에두게..*/
+        border: 3px solid black;
+        margin: 10px 10px 0 0; /*섹션이랑 안붙게 위랑좀띄우고*/
+        padding-right: 10px; /* 설치류 글자랑 안붙게 좀밀고*/
+      }
+
+      a.notwhitespace {
+        /* ~류 안찌그러지게 */
+        white-space: nowrap;
+      }
+      /* ************* end 동물목록 *********  */
+      /* 영역구분 */
+      div.nanugi {
+        display: flex;
+      }
+      section {
+        flex: auto;
+        border: 3px solid rgb(0, 0, 0);
+        margin-top: 10px; /* 동물메뉴랑 똑같이 메뉴에서 10xp 띄우고 */
+      }
+      /* 영역구분 end*/
+    </style>
+  </head>
+  <body>
+    <!-- header 눌러서 홈으로 가게-->
+    <a class="ha" href="#">
+      <header><h1>반려동물 백서</h1></header>
+    </a>
+
+    <!-- @@@@@@@일반메뉴@@@@@@@ -->
+    <ul class="MENU">
+      <li>HOME</li>
+      <li>자유게시판</li>
+      <li>공지사항</li>
+      <li>로그인</li>
+      <li>회원가입</li>
+    </ul>
+    <!-- @@@@@@@일반메뉴 end@@@@@@@ -->
+    <!-- ********동물메뉴***** -->
+    <div class="nanugi">
+      <div class="dropdown_menu">
+        <ul id="gnb">
+          <h4>menu</h4>
+          <li>
+            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" />설치류</a>
+            <!--서브메뉴1-->
+            <ul class="sub_menu">
+              <li>
+                <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물1
+              </li>
+              <li>
+                <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물2
+              </li>
+              <li>
+                <a href="#"><img class="b_animal" src="/animal/설치류.png" alt="설치류" /></a>동물3
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/어류.png" alt="어류" />어류</a>
+            <!--서브메뉴2-->
+            <ul class="sub_menu">
+              <li><a href="#"></a>동물1</li>
+              <li><a href="#"></a>동물2</li>
+              <li><a href="#"></a>동물3</li>
+            </ul>
+          </li>
+          <li>
+            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/조류.png" alt="조류" />조류</a>
+            <!--서브메뉴3-->
+            <ul class="sub_menu">
+              <li><a href="#"></a>동물1</li>
+              <li><a href="#"></a>동물2</li>
+              <li><a href="#"></a>동물3</li>
+            </ul>
+          </li>
+          <li>
+            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/파충류.png" alt="파충류" />파충류</a>
+            <!--서브메뉴3-->
+            <ul class="sub_menu">
+              <li><a href="#"></a>동물1</li>
+              <li><a href="#"></a>동물2</li>
+              <li><a href="#"></a>동물3</li>
+            </ul>
+          </li>
+          <li>
+            <a class="notwhitespace" href="#"><img class="b_animal" src="/animal/포유류.png" alt="포유류" />포유류</a>
+            <!--서브메뉴3-->
+            <ul class="sub_menu">
+              <li><a href="#"></a>동물1</li>
+              <li><a href="#"></a>동물2</li>
+              <li><a href="#"></a>동물3</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- ********동물메뉴 끝***** -->
+      <!-- 이 섹션이 이제 화면전환시 변할곳 -->
+      <section>
+        <article></article>
+        <article></article>
+      </section>
+    </div>
+    <!--나누기용div-->
+  </body>
+</html>
