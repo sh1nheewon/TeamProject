@@ -22,12 +22,6 @@ section.hwamyeon div span {
   margin: 10px;
 }
 
-section.hwamyeon div span strong {
-  background-color: #00dad6;
-  border-radius: 10px;
-  padding: 1px;
-}
-
 .menu {
   display: flex;
   background-color: #00dad6;
@@ -65,7 +59,7 @@ section.hwamyeon>header {
 }
 
 header.header {
-  background-color: rgb(183, 149, 149);
+  background-color: #fff3af;
   padding: 0.7rem;
   display: flex;
 

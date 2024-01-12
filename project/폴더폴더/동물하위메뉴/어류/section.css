@@ -59,7 +59,7 @@ section.hwamyeon>header {
 }
 
 header.header {
-  background-color: rgb(183, 149, 149);
+  background-color: #fff3af;
   padding: 0.7rem;
   display: flex;
 
@@ -92,12 +92,4 @@ header.header {
   padding: 0.7rem;
   display: flex;
 
-}
-
-section.hwamyeon p.danger {
-  color: red;
-}
-
-section.hwamyeon p.text {
-  color: #00dad6;
 }
