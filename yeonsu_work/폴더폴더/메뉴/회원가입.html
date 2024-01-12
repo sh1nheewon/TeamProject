@@ -9,6 +9,51 @@
     <script src="https://kit.fontawesome.com/9b331147db.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../check.css" />
     <link rel="stylesheet" href="../main.css" />
+    <style>
+  section.hwamyeon {
+    border: 5px solid black;
+    width: 400px;
+    padding: 40px;
+    margin: 20px auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 7%;
+    background-color: #bcbe7f;
+  }
+  form.join h2{
+  }
+      form.join input,
+      form.join button {
+        padding: 10px 40px;
+        margin: 10px 0;
+        display: block;
+        
+        
+      }
+      form.join button {
+      
+      }
+      form.join button:hover {
+      background-color: orange;
+      }
+      form.join input {
+      padding-left: 30px;
+  background-color: white;
+  text-align: left;
+      }
+      form.join input:focus {
+        background-color: #f8f8e8;
+        outline: none;
+      }
+      
+      form.join li{
+        
+      display: none;
+      }
+
+      
+    </style>
   </head>
   <body>
     <!-- header 눌러서 홈으로 가게-->
@@ -146,7 +191,19 @@
       </div>
       <!-- ********동물메뉴 끝***** -->
       <!-- ****이 섹션이 이제 화면전환시 변할곳 -->
-      <section class="hwamyeon"></section>
+      <section class="hwamyeon">
+        <form class="join">
+          <h2>회원가입</h2>
+          <li>ID</li><input name="userid" placeholder="ID 를 입력하세요"/>
+          <li>PASSWORD</li><input name="userpassword" placeholder="비밀번호를 입력하세요"/>
+          <li>이름</li><input name="username" placeholder="이름을 입력하세요"/>
+          <li>생년월일</li><input name="userdate" placeholder="생년월일을 입력하세요"/>
+        <li>주소</li><input name="useraddr" placeholder="주소를 입력하세요"/>
+      <li>전화번호</li><input name="userphone" placeholder="전화번호를 입력하세요"/>
+    <li>e-mail</li><input name="useremail" placeholder="이메일을 입력하세요"/>
+          <button class="btn_join" type="button">회원가입</button>
+        </form>
+      </section>
     </div>
     <!--나누기용div-->
   </body>
