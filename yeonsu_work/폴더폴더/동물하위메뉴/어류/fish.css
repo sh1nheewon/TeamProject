@@ -1,8 +1,10 @@
-section.hwamyeon p {
+section.hwamyeon p b {
 }
 section.hwamyeon p.danger {
   color: red;
 }
 section.hwamyeon p.text {
   color: #00dad6;
+}
+section.hwamyeon p.text p {
 }
