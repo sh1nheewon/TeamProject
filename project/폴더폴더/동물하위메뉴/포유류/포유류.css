@@ -1,0 +1,30 @@
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+section.hwamyeon>header {
+    font-size: 50px;
+}
+
+header.header {
+    background-color: rgb(183, 149, 149);
+    padding: 0.7rem;
+    display: flex;
+
+}
+
+p.box1,
+p.box2,
+p.box3,
+p.box4 {
+    border: 3px solid black;
+    font-size: 20px;
+}
+
+article.box1 ul p1 {
+    margin: 10px;
+}
+
+article.box1 ul li {
+
+    padding: 0 7px;
+}
