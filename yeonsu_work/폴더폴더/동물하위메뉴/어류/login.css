@@ -1,5 +1,5 @@
 section {
-  background-image: url(./ow.png);
+  background-image: url(./men.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -8,30 +8,69 @@ section {
   align-items: center;
   font-weight: bold;
 }
-section div.login {
+/* section div.login {
   text-align: center;
   color: black;
   padding: 20px;
   font-size: 20px;
 }
 section div.text {
-  text-align: left;
-  border: 1px solid red;
   text-align: center;
   color: black;
   padding: 5rem;
   width: 100%;
+} */
+form.login {
+  width: 60%;
+  margin: 10px auto;
+}
+form.login fieldset {
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+form.login legend {
+  padding: 10px;
+  color: black;
+}
+form.login div {
+  width: 80%;
+  margin: 3px auto;
+  display: flex;
+}
+form.login label,
+form.login input {
+  margin: 5px;
+  padding: 8px;
+  flex: 1;
+}
+form.login input {
+  flex: 2;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #eee;
+}
+form.login input:hover {
+  background-color: #00dad6;
+}
+form.login input:focus {
+  border: 2px solid black;
+}
+section div.button div {
+  flex: 1;
 }
 section div.button {
-  width: 20%;
-  padding: 1rem;
-  border: none;
+  margin: 5px;
+  width: 100%;
+  padding: 10px 18px;
+  border: 2px solid #ddd;
   cursor: pointer;
   background-color: #00dad6;
   color: black;
-  border-radius: 20px;
-  margin-left: 10rem;
+  border-radius: 10px;
+  outline: none;
 }
 section div.button:hover {
   opacity: 0.8;
+  box-shadow: 2px 2px 2px black;
 }
