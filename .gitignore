@@ -21,6 +21,8 @@ hs_err_pid*
 build/
 
 # eclipse project folder
+.metadata/
+bin/
 tmp/
 target/
 .target/
@@ -143,5 +145,3 @@ typings/
 # ETC
 .bak
 
-# Security
-mysql.js
