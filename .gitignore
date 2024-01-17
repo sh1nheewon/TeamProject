@@ -145,3 +145,5 @@ typings/
 # ETC
 .bak
 .vscode/
+/.vscode
+/.vscode/
