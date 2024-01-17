@@ -144,4 +144,4 @@ typings/
 
 # ETC
 .bak
-
+.vscode/
