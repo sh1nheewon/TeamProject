@@ -59,7 +59,7 @@ section.hwamyeon>header {
 }
 
 header.header {
-  background-color: rgb(183, 149, 149);
+  background-color: #ffdf6a;
   padding: 0.7rem;
   display: flex;
 
@@ -84,20 +84,4 @@ article.box1 ul li {
 
 section.hwamyeon span article {
   margin: 0;
-}
-
-
-header.header {
-  background-color: rgb(183, 149, 149);
-  padding: 0.7rem;
-  display: flex;
-
-}
-
-section.hwamyeon p.danger {
-  color: red;
-}
-
-section.hwamyeon p.text {
-  color: #00dad6;
 }
