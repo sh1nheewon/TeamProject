@@ -11,38 +11,43 @@
   <link rel="stylesheet" href="../check.css" />
   <link rel="stylesheet" href="../main.css" />
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     section.hwamyeon {
       border: 5px solid black;
-      width: 400px;
+      border-radius: 7%;
+      width: 500px;
       padding: 40px;
       margin: 20px auto;
       position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      border-radius: 7%;
       background-color: #ffdf6a;
-
+      left: 500px;
+      text-align: center;
     }
-
-    form.join h2 {}
 
     form.join input,
     form.join button {
+      display: block;
       padding: 10px 40px;
       margin: 10px 0;
-      display: block;
-
-
+      outline: none;
     }
 
-    form.join button {}
+    form.join button {
+      margin-left: 60%;
+    }
 
     form.join button:hover {
       background-color: orange;
     }
 
     form.join input {
-      padding-left: 30px;
+      width: 70%;
+      margin-left: 10%;
       background-color: white;
       text-align: left;
     }
@@ -198,8 +203,8 @@
     <section class="hwamyeon">
       <form class="join">
         <h2>회원가입</h2>
-        <li>ID</li><input name="userid" placeholder="ID 를 입력하세요" />
-        <li>PASSWORD</li><input name="userpassword" placeholder="비밀번호를 입력하세요" />
+        <li>ID</li><input name="userid" placeholder="사용할 ID 를 입력하세요" />
+        <li>PASSWORD</li><input name="userpassword" placeholder="사용할 비밀번호를 입력하세요" />
         <li>이름</li><input name="username" placeholder="이름을 입력하세요" />
         <li>생년월일</li><input name="userdate" placeholder="생년월일을 입력하세요" />
         <li>주소</li><input name="useraddr" placeholder="주소를 입력하세요" />
