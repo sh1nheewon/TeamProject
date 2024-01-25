@@ -10,6 +10,7 @@
   <script src="https://kit.fontawesome.com/9b331147db.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../check.css" />
   <link rel="stylesheet" href="../main.css" />
+  <script src="/project/메뉴/join/join.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -20,46 +21,66 @@
     section.hwamyeon {
       border: 5px solid black;
       border-radius: 7%;
-      width: 500px;
-      padding: 40px;
-      margin: 20px auto;
+      width: 700px;
+      padding: 15px 0;
+      margin: 20px 0;
       position: absolute;
       background-color: #ffdf6a;
       left: 500px;
       text-align: center;
     }
 
-    form.join input,
-    form.join button {
+    .hwamyeon input,
+    .userid_button {
       display: block;
-      padding: 10px 40px;
+      padding: 10px;
       margin: 10px 0;
       outline: none;
     }
 
-    form.join button {
-      margin-left: 60%;
-    }
 
-    form.join button:hover {
+    .btn_join:hover {
       background-color: orange;
     }
 
-    form.join input {
-      width: 70%;
-      margin-left: 10%;
+    .hwamyeon input {
+      width: 300px;
+      margin: 10px;
       background-color: white;
       text-align: left;
+      border-radius: 20px;
     }
 
-    form.join input:focus {
+    .hwamyeon input:focus {
       background-color: #f8f8e8;
       outline: none;
     }
 
-    form.join li {
+    .hwamyeon li {
+      display: flex;
+      padding: 10px;
+    }
 
-      display: none;
+    .hwamyeon li p {
+      border: 1px solid red;
+      text-align: right;
+    }
+
+    .hwamyeon li input {
+      width: 500px;
+    }
+
+    .userid_button {
+      width: 90px;
+      background-color: #ffdf6a;
+      border-radius: 20px;
+      box-shadow: 1px 1px 1px black;
+      cursor: pointer;
+
+    }
+
+    .userid_button:focus {
+      background-color: red;
     }
   </style>
 </head>
@@ -186,15 +207,32 @@
     <!-- ********동물메뉴 끝***** -->
     <!-- ****이 섹션이 이제 화면전환시 변할곳 -->
     <section class="hwamyeon">
-      <form class="join">
-        <h2>회원가입</h2>
-        <li>ID</li><input name="userid" placeholder="사용할 ID 를 입력하세요" />
-        <li>PASSWORD</li><input name="userpassword" placeholder="사용할 비밀번호를 입력하세요" />
-        <li>이름</li><input name="username" placeholder="이름을 입력하세요" />
-        <li>생년월일</li><input name="userdate" placeholder="생년월일을 입력하세요" />
-        <li>주소</li><input name="useraddr" placeholder="주소를 입력하세요" />
-        <li>전화번호</li><input name="userphone" placeholder="전화번호를 입력하세요" />
-        <li>e-mail</li><input name="useremail" placeholder="이메일을 입력하세요" />
+      <h2>회원가입</h2>
+      <form action="./join" method="POST">
+        <li>
+          <input name="userid" placeholder="사용할 ID 를 입력하세요" />
+          <button class="userid_button">중복확인</button>
+        </li>
+        <li>
+          <input name="userpassword" type="password" placeholder="사용할 비밀번호를 입력하세요" />
+        </li>
+        <li>
+          <input name="checkpassword" type="password" placeholder="비밀번호 확인" />
+        </li>
+        <li>
+          <input name="username" placeholder="이름을 입력하세요" />
+        </li>
+        <li>
+          <input name="userdate" placeholder="생년월일을 입력하세요" />
+        </li>
+        <li>
+          <input name="useraddr" placeholder="주소를 입력하세요" />
+        </li>
+        <li><input name="userphone" placeholder="전화번호를 입력하세요" />
+        </li>
+        <li>
+          <input name="useremail" placeholder="이메일을 입력하세요" />
+        </li>
         <button class="btn_join" type="button">회원가입</button>
       </form>
     </section>
