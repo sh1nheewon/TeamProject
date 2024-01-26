@@ -10,7 +10,7 @@
   <script src="https://kit.fontawesome.com/9b331147db.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../check.css" />
   <link rel="stylesheet" href="../main.css" />
-  <script src="/project/메뉴/join/join.js"></script>
+  <script src="/project/메뉴/join/join2.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -211,27 +211,27 @@
       <form action="./join" method="POST">
         <li>
           <input name="userid" placeholder="사용할 ID 를 입력하세요" />
-          <button class="userid_button">중복확인</button>
+          <button class="userid_button" type="button">중복확인</button>
         </li>
         <li>
-          <input name="userpassword" type="password" placeholder="사용할 비밀번호를 입력하세요" />
+          <input name="userpassword" id="userpassword" type="password" placeholder="사용할 비밀번호를 입력하세요" />
         </li>
         <li>
-          <input name="checkpassword" type="password" placeholder="비밀번호 확인" />
+          <input name="checkpassword" id="checkpassword" type="password" placeholder="비밀번호 확인" />
         </li>
         <li>
-          <input name="username" placeholder="이름을 입력하세요" />
+          <input name="username" id="username" placeholder="이름을 입력하세요" />
         </li>
         <li>
-          <input name="userdate" placeholder="생년월일을 입력하세요" />
+          <input name="userdate" id="userdate" placeholder="생년월일을 입력하세요" />
         </li>
         <li>
-          <input name="useraddr" placeholder="주소를 입력하세요" />
+          <input name="useraddr" id="useraddr" placeholder="주소를 입력하세요" />
         </li>
-        <li><input name="userphone" placeholder="전화번호를 입력하세요" />
+        <li><input name="usertel" id="usertel" placeholder="전화번호를 입력하세요" />
         </li>
         <li>
-          <input name="useremail" placeholder="이메일을 입력하세요" />
+          <input name="useremail" id="useremail" placeholder="이메일을 입력하세요" />
         </li>
         <button class="btn_join" type="button">회원가입</button>
       </form>
