@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 회원가입 버튼을 눌렀을 때, 
 // 값을 입력한 곳이 있으면 알림창을 보여주고 값이 없는 자리로 이동
     const btn_join = document.querySelector("button.btn_join");
-    const btn_checkpw = document.querySelector("button.btn_pw");
-    btn_join.addEventListener("click", () => {
+    btn_join?.addEventListener("click", () => {
 
 
     // 저장한 값을 변수에 저장
@@ -62,27 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // 비밀번호와 비밀번호 확인의 값이 일치하지 않으면 알림창이 뜨고 다시 입력하도록 함.
-        if(!txt_checkpassword) {
-            alert("비밀번호를 한번 더 입력해 주세요");
+        if(txt_checkpassword !== txt_userpassword) {
+            alert("비밀번호가 일치하지 않습니다");
             input_checkpassword.focus();
             return false;
         }
-
-        // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        // 비밀번호를 입력하고 확인 버튼을 안누르면 누르게끔 버튼 만들기
-        // 회원가입 버튼을 눌렀을 때, 비번확인을 안누르면 누르게끔 만들기
-
-
-        
-        // 비밀번호 확인
-        btn_checkpw.addEventListener("click", () =>{
-            if(txt_checkpassword !== txt_userpassword) {
-                alert("비밀번호가 일치하지 않습니다");
-                input_checkpassword.focus();
-                return false;
-            }      
-        }); 
-  
         if(!txt_username) {
             alert("이름을 입력해 주세요");
             input_username.focus();
@@ -117,86 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // 회원가입을 완료하면 알림창이 뜨고 확인 버튼을 누르면 홈으로 가기.
     });
 
-
-    
-
     // 아이디 중복확인
-    const btn_checkid = document.querySelector("button.btn_userid");
-    btn_checkid.addEventListener("click", () =>{
-        alert("사용가능한 ID 입니다.")
-    
-        // 새로 입력하는 input_userid.value 의 값과 
-        // db에 이미 저장된 userid 의 값이 같다면
-        // 이미 있는 아이디라고 알림을 보내고 다시 입력하도록 만들기
-        // if( db_userid !== input_userid.value){ alert("사용가능한 ID") }
-        // else { alert("이미 사용중인 ID") }
-    }); 
 
-
-});
-
-
-//node. e 빼기
-    document.addEventListener("DOMContentLoadede", () => {
-
-    
-    const JOIN_INDEX = {
-        USERID: 0,
-        USERPASSWORD: 1,
-        CHECKPASSWORD: 2,
-        USERNAME: 3,
-        UERDATE: 4,
-        USERADDR: 5,
-        USERTEL: 6,
-        USEREMAIL:7,
-    };
-
-
-    const userid_check = async (userid) => {
-        const response = await fetch(`/project/메뉴/회원가입${userid}/check`);
-        const json = await response.json();
-        console.log(json);
-        return json.result;
-    };
-
-    const error_divs = document.querySelectorAll("div.join.error");
-
-    const userid_valid = async (target) => {
-
-        const result = await userid_check(target.value);
-        let message = "";
-        let color = "red";
-        if (result === "ERROR") {
-            message = " * DB 오류";
-        } else if (result === "있다") {
-            message = " * 이미 등록된 ID 입니다";
-        } else if (result === "없다") {
-            message = " * 사용가능한 ID 입니다";
-            color = "blue";
-        }
-        error_divs[JOIN_INDEX.USERID].innerHTML = message;
-        error_divs[JOIN_INDEX.USERID].style.color = color;
-
-        return color === "red";
-
-    };
-
-    const btn_userid = document.querySelector("button.btn_userid")
-
-    btn_userid.addEventListener("click", async () => {
-        error_divs.forEach((item) => (item.innerHTML = ""));
-        if (!userid.value) {
-            error_divs[JOIN_INDEX.USERID].innerHTML =
-                "* ID를 반드시 입력해야 합니다";
-            userid.select();
-            return false;
-        } else {
-            const bRedYes = userid_valid(userid);
-            if (bRedYes) {
-                userid.select();
-                return false;
-            }
-        }
-
-});
 });

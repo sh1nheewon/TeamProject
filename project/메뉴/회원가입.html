@@ -31,7 +31,7 @@
     }
 
     .hwamyeon input,
-    .userid_button {
+    .btn_userid {
       display: block;
       padding: 10px;
       margin: 10px 0;
@@ -69,9 +69,10 @@
     .hwamyeon li input {
       width: 500px;
     }
-
-    .userid_button {
-      width: 90px;
+    .btn_join,
+    .btn_userid,
+    .btn_pw {
+      width: 110px;
       background-color: #ffdf6a;
       border-radius: 20px;
       box-shadow: 1px 1px 1px black;
@@ -79,7 +80,12 @@
 
     }
 
-    .userid_button:focus {
+    .btn_pw,
+    .btn_join{
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .btn_userid:hover {
       background-color: red;
     }
   </style>
@@ -211,27 +217,37 @@
       <form action="./join" method="POST">
         <li>
           <input name="userid" placeholder="사용할 ID 를 입력하세요" />
-          <button class="userid_button" type="button">중복확인</button>
+          <!-- <div class="join.error.userid"></div> -->
+          <button class="btn_userid" type="button">중복확인</button>
         </li>
         <li>
           <input name="userpassword" id="userpassword" type="password" placeholder="사용할 비밀번호를 입력하세요" />
+          <!-- <div class="join.error.userpassword"></div> -->
         </li>
         <li>
           <input name="checkpassword" id="checkpassword" type="password" placeholder="비밀번호 확인" />
+          <!-- <div class="join.error.checkpassword"></div> -->
+          <button class="btn_pw" type="button">비밀번호확인</button>
         </li>
         <li>
           <input name="username" id="username" placeholder="이름을 입력하세요" />
+          <!-- <div class="join.error.username"></div> -->
         </li>
         <li>
-          <input name="userdate" id="userdate" placeholder="생년월일을 입력하세요" />
+          <input name="userdate" id="userdate" type="date" placeholder="생년월일을 입력하세요" />
+          <!-- <div class="join.error.userdate"></div> -->
         </li>
         <li>
           <input name="useraddr" id="useraddr" placeholder="주소를 입력하세요" />
-        </li>
-        <li><input name="usertel" id="usertel" placeholder="전화번호를 입력하세요" />
+          <!-- <div class="join.error.useraddr"></div> -->
         </li>
         <li>
-          <input name="useremail" id="useremail" placeholder="이메일을 입력하세요" />
+          <input name="usertel" id="usertel" type="tel" placeholder="전화번호를 입력하세요" />
+          <!-- <div class="join.error.usertel"></div> -->
+        </li>
+        <li>
+          <input name="useremail" id="useremail" type="email" placeholder="이메일을 입력하세요" />
+          <!-- <div class="join.error.useremail"></div> -->
         </li>
         <button class="btn_join" type="button">회원가입</button>
       </form>
