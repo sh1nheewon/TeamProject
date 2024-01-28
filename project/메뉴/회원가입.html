@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../main.css" />
   <script src="/project/메뉴/join/join2.js"></script>
   <style>
-    * {
+     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -31,7 +31,7 @@
     }
 
     .hwamyeon input,
-    .userid_button {
+    .btn_userid {
       display: block;
       padding: 10px;
       margin: 10px 0;
@@ -69,9 +69,10 @@
     .hwamyeon li input {
       width: 500px;
     }
-
-    .userid_button {
-      width: 90px;
+    .btn_join,
+    .btn_userid,
+    .btn_pw {
+      width: 110px;
       background-color: #ffdf6a;
       border-radius: 20px;
       box-shadow: 1px 1px 1px black;
@@ -79,7 +80,12 @@
 
     }
 
-    .userid_button:focus {
+    .btn_pw,
+    .btn_join{
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .btn_userid:hover {
       background-color: red;
     }
   </style>
@@ -218,6 +224,7 @@
         </li>
         <li>
           <input name="checkpassword" id="checkpassword" type="password" placeholder="비밀번호 확인" />
+          <button class="btn_pw" type="button">비밀번호확인</button>
         </li>
         <li>
           <input name="username" id="username" placeholder="이름을 입력하세요" />
