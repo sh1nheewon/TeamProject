@@ -76,10 +76,13 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // 비밀번호 확인
         btn_checkpw.addEventListener("click", () =>{
-            if(txt_checkpassword !== txt_userpassword) {
+            if(input_checkpassword.value !== input_userpassword.value) {
                 alert("비밀번호가 일치하지 않습니다");
                 input_checkpassword.focus();
                 return false;
+            }else {
+                input_username.focus();
+                alert("비밀번호가 확인되었습니다.")
             }      
         }); 
   
@@ -121,10 +124,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
     // 아이디 중복확인
-    const btn_checkid = document.querySelector("button.btn_userid");
+    const btn_checkid = document.querySelector("button.userid_button");
     btn_checkid.addEventListener("click", () =>{
+
         alert("사용가능한 ID 입니다.")
-    
+        input_userpassword.focus();
         // 새로 입력하는 input_userid.value 의 값과 
         // db에 이미 저장된 userid 의 값이 같다면
         // 이미 있는 아이디라고 알림을 보내고 다시 입력하도록 만들기
