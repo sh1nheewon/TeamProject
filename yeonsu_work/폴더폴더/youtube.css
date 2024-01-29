@@ -198,29 +198,11 @@ img.pawin {
 p.psite {
   text-align: center;
 }
-footer.mf {
-  background-color: #00dad6;
-  height: 50px;
-  margin-top: 10px;
-  border-radius: 10px;
-  display: flex;
+p.res {
   text-align: center;
-  a {
-    flex: 1;
-    display: block;
-    margin: 5px;
-    margin-left: 5px;
-    margin-top: 15px;
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    transition: 0.7s;
-    &:hover {
-      color: white;
-    }
-  }
+  margin-top: 5px;
 }
-
-img.youtube {
-  border-radius: 10px;
+article.movie {
+  border: 3px solid red;
+  border-radius: 5px;
 }

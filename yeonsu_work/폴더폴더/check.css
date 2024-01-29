@@ -53,7 +53,7 @@ section.list li {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none; /* 더블클릭했을때 블럭x */
-  padding: 0.9rem;
+  padding: 0.3rem; /* 리스트 줄크기 */
   transition: 0.3s;
 
   display: flex;
