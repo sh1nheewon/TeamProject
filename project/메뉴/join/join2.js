@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 비밀번호와 비밀번호 확인의 값이 일치하지 않으면 알림창이 뜨고 다시 입력하도록 함.
         // 일치하면 다음 입력칸인 이름 입력 박스로 커서 이동.
+
         if (input_checkpassword.value !== input_userpassword.value) {
             input_checkpassword.focus();
             alert("비밀번호가 일치하지 않습니다");
@@ -154,6 +155,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+
 
 
 //node. e 빼기
