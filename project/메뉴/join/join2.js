@@ -151,13 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("비밀번호가 확인되었습니다");
 
         }
-
     });
-
 });
-
-
-
 
 
 //node. e 빼기
