@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
+
     // 회원가입 버튼을 눌렀을 때, 
     // 값을 입력한 곳이 있으면 알림창을 보여주고 값이 없는 자리로 이동
     const btn_join = document.querySelector("button.btn_join");
