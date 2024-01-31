@@ -206,3 +206,27 @@ article.movie {
   border: 3px solid red;
   border-radius: 5px;
 }
+
+div.youtube1,
+div.youtube2 {
+  display: flex;
+}
+
+article.movie1-2,
+article.movie1,
+article.movie2,
+article.movie2-2 {
+  margin-left: 15px;
+}
+
+article.movie1-2,
+article.movie2-2 {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  article.movie1-2,
+  article.movie2-2 {
+    display: block;
+  }
+}

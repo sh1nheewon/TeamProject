@@ -106,7 +106,8 @@ h3.checklist {
 .fa-calendar,
 .fa-bell,
 .fa-book-medical,
-.fa-magnifying-glass {
+.fa-magnifying-glass,
+.fa-plus {
   /* 아이콘 옆으로띄우기 */
   margin-right: 5px;
 }
