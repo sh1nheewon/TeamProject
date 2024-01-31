@@ -212,11 +212,9 @@ div.youtube2 {
   display: flex;
 }
 
-article.movie1-2,
 article.movie1,
-article.movie2,
-article.movie2-2 {
-  margin-left: 15px;
+article.movie2 {
+  margin-left: 20px;
 }
 
 article.movie1-2,
@@ -224,9 +222,14 @@ article.movie2-2 {
   display: none;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   article.movie1-2,
   article.movie2-2 {
     display: block;
+  }
+  article.movie1,
+  article.movie2 {
+    margin-left: 120px; /* 화면커지면.. 다른영상2개더 보이고
+    원래보이던 영상을 옆으로 옮겨서 보기좋게 */
   }
 }

@@ -17,7 +17,7 @@ body {
 header {
   background-color: #ffdf6a;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
 }
 a.ha {
   text-decoration: none;
@@ -199,7 +199,8 @@ p.psite {
   text-align: center;
 }
 footer.mf {
-  background-color: #00dad6;
+  border: 5px solid #00dad6;
+  background-color: #c5fffa;
   height: 50px;
   margin-top: 10px;
   border-radius: 10px;
@@ -216,7 +217,9 @@ footer.mf {
     font-weight: bold;
     transition: 0.7s;
     &:hover {
+      background-color: #00dad6;
       color: white;
+      border-radius: 10px;
     }
   }
 }
@@ -229,7 +232,6 @@ img.youtube {
 }
 div.etc {
   display: flex;
-  border: 5px solid #00dad6;
 
   margin: 0 20px 20px 20px;
 }
@@ -247,4 +249,8 @@ div.etc article {
 h3.other {
   text-align: center;
   margin-bottom: 5px;
+}
+
+div.etc article a img:hover {
+  opacity: 0.7;
 }
