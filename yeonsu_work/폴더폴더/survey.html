@@ -8,8 +8,38 @@
     <link rel="stylesheet" href="./check.css" />
     <!-- 아이콘js주소 -->
     <script src="https://kit.fontawesome.com/9b331147db.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./home.css" />
-    <script src="check.js"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <style>
+      div.survey {
+        margin: auto;
+        padding: 10px;
+      }
+      form p {
+        border: 3px solid#ffdf6a;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #fff3af;
+      }
+      h1.surveyh1 {
+        border: 3px solid #ffdf6a;
+        border-radius: 15px;
+        padding: 10px;
+        margin-bottom: 30px;
+      }
+      h1.surveyh1,
+      h5 {
+        text-align: center;
+      }
+      div #result {
+        margin-top: 10px;
+        border: 3px solid #ffdf6a;
+        background-color: #fff3af;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+    </style>
+    <script src="./survey.js"></script>
   </head>
   <body>
     <!-- header 눌러서 홈으로 가게-->
@@ -133,45 +163,41 @@
       <!-- ********동물메뉴 끝***** -->
       <!-- ****이 섹션이 이제 화면전환시 변할곳 -->
       <section class="hwamyeon">
-        <!--산책하기~같은 체크리스트-->
-        <article>
-          <h3 class="checklist">
-            <strong><i class="fas fa-light fa-calendar"></i>CheckList</strong>
-          </h3>
-          <section class="input ckcss">
-            <input placeholder="할일입력" /><button>추가<i class="fas fa-solid fa-feather"></i></button>
-          </section>
-          <section class="list ckcss">
-            <ul></ul>
-          </section>
-          <!--input 섹션2개 end-->
-        </article>
-        <h3 class="other"><i class="fa-solid fa-plus"></i>Other Contents</h3>
-        <div class="etc notwhitespace">
-          <article>
-            <a href="/폴더폴더/youtube.html">
-              <img class="youtube" src="../폴더폴더/image/youtube.png" alt="유튜브아이콘" />
-              <p>추천 영상</p></a
-            >
-          </article>
-          <article>
-            <a href="./survey.html">
-              <img src="./image/survey.png" />
-              <p>나는 반려동물을 잘 키울 수 있을까?</p>
-              <p>스스로 체크해보자!</p></a
-            >
-          </article>
+        <div class="survey">
+          <h1 class="surveyh1">나는 반려동물을 잘 키울 수 있을까?</h1>
+          <form>
+            <p>1. 반려동물을 키우는데에 가족들의 반대가 없다.</p>
+            <input type="radio" name="question1" id="question1_yes" value="yes" /> 예
+            <input type="radio" name="question1" id="question1_no" value="no" /> 아니오
+
+            <p>2. 매일 반려동물에게 나의 시간을 나누어줄 수 있다.</p>
+            <input type="radio" name="question2" id="question2_yes" value="yes" /> 예
+            <input type="radio" name="question2" id="question2_no" value="no" /> 아니오
+
+            <p>3. 반려동물에게 사용하는 돈이 아깝지 않다</p>
+            <input type="radio" name="question3" id="question3_yes" value="yes" /> 예
+            <input type="radio" name="question3" id="question3_no" value="no" /> 아니오
+
+            <p>4. 반려동물을 키우는데에 고정비용이 드는 것을 인지하고 있다.</p>
+            <input type="radio" name="question4" id="question4_yes" value="yes" /> 예
+            <input type="radio" name="question4" id="question4_no" value="no" /> 아니오
+
+            <p>5. 반려동물을 위한 적금을 들 수있다.</p>
+            <input type="radio" name="question5" id="question5_yes" value="yes" /> 예
+            <input type="radio" name="question5" id="question5_no" value="no" /> 아니오
+
+            <p>6. 매일 관리해야하는 것을 알고 있고, 어떻게 관리할지 배울여력이있다.</p>
+            <input type="radio" name="question6" id="question6_yes" value="yes" /> 예
+            <input type="radio" name="question6" id="question6_no" value="no" /> 아니오
+
+            <br /><br />
+            <button type="button" onclick="calculateScore()">결과 확인</button>
+          </form>
+
+          <div id="result"></div>
         </div>
       </section>
     </div>
     <!--나누기용div-->
-    <footer class="notwhitespace mf">
-      <a href="https://www.animal.go.kr/front/awtis/public/publicList.do?menuNo=1000000055" target="new"
-        >유기동물조회<i class="fa-solid fa-magnifying-glass"></i
-      ></a>
-      <a href="https://www.animal.go.kr/front/index.do" target="new">국가동물보호정보시스템</a>
-      <a href="https://pawinhand.kr/" target="new">포인핸드</a>
-      <a href="https://apms.epis.or.kr/home/kor/main.do" target="new">동물사랑배움터</a>
-    </footer>
   </body>
 </html>

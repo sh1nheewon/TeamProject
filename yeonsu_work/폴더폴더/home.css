@@ -9,6 +9,7 @@ html {
 }
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 /*초기화코드 End*/
 
@@ -50,6 +51,9 @@ ul.MENU li a {
   transition: 0.7s;
   text-decoration: none;
 }
+a.menu1 li {
+  text-decoration: none;
+}
 ul.MENU li a:hover {
   cursor: pointer;
   /* background-color: rgb(255, 205, 113); */
@@ -78,16 +82,18 @@ li {
 }
 #gnb > li:hover > a {
   /* border-bottom: 3px solid red; */
-  background-color: blueviolet;
+  background-color: inherit;
   /*나중엔 사진을 넣을거니까 opacity 가좋을듯*/
 }
 #gnb li:hover ul {
   display: block;
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
 }
 #gnb li ul li:hover a {
   /* border-bottom: 3px solid pink; */
-  background-color: rgb(251, 5, 255);
+  background-color: inherit;
+  background-color: #ffdf6a;
+  border-radius: 30px;
 }
 ul li ul li {
   margin-left: 100px;
@@ -100,6 +106,7 @@ h4 {
   padding: 10px;
   border: solid black;
   border-radius: 50px;
+  background-color: #c5fffa;
 }
 img.b_animal {
   margin: 5px 0 15px 10px;
@@ -113,6 +120,7 @@ div.dropdown_menu {
   border: 3px solid black;
   margin: 10px 10px 0 10px; /*섹션이랑 안붙게 위랑좀띄우고, 왼쪽도살짝*/
   padding-right: 10px; /* 설치류 글자랑 안붙게 좀밀고*/
+  background-color: #fff8b4;
 }
 
 .notwhitespace {
@@ -121,6 +129,9 @@ div.dropdown_menu {
   text-decoration: none; /* 줄떼고 */
   color: black;
   font-weight: bold;
+}
+.anima:hover {
+  opacity: 0.6;
 }
 /* ************* end 동물목록 *********  */
 /* 영역구분 */
@@ -139,7 +150,6 @@ section {
 section article {
   margin: 10px;
   flex: 1;
-  border: 3px solid #94e65e;
 }
 /* 알림 */
 ul.alrim {
@@ -164,3 +174,83 @@ li.alrim a {
   color: black;
 }
 /* 알림 end */
+/* art2 사이트목록 */
+div.site {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+div.site a {
+  flex: 1;
+  margin: 5px;
+  margin-right: 17px;
+  color: black;
+  text-decoration: none;
+  border: 3px solid pink;
+  border-radius: 8px;
+  padding: 3px;
+  background-color: #fff8cd;
+}
+img.pawin {
+  width: 50px;
+  height: 50px;
+}
+p.psite {
+  text-align: center;
+}
+footer.mf {
+  border: 5px solid #00dad6;
+  background-color: #c5fffa;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  a {
+    flex: 1;
+    display: block;
+    margin: 5px;
+    margin-left: 5px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.7s;
+    &:hover {
+      background-color: #00dad6;
+      color: white;
+      border-radius: 10px;
+    }
+  }
+}
+
+img.youtube {
+  border-radius: 10px;
+  width: 200px;
+  height: 120px;
+  margin-top: 50px;
+}
+div.etc {
+  display: flex;
+
+  margin: 0 20px 20px 20px;
+}
+div.etc article {
+  border: 5px solid pink;
+  border-radius: 10px;
+  a {
+    display: block;
+    text-align: center;
+
+    text-decoration: none;
+    color: black;
+  }
+}
+h3.other {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+div.etc article a img:hover {
+  opacity: 0.7;
+}
