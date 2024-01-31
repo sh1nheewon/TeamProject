@@ -3,28 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // 회원가입을 할 때 작성할 값을 input box 로 만들고, 
     // 그 값을 저장할 변수를 input_userXXX 로 선언
 
-    const input_userid = document.querySelector(
+    const join_form = document.querySelector("form.join");
+
+    const input_userid = join_form.querySelector(
         "input[name='userid']"
     );
-    const input_userpassword = document.querySelector(
+    const input_userpassword = join_form.querySelector(
         "input[name='userpassword']"
     );
-    const input_checkpassword = document.querySelector(
+    const input_checkpassword = join_form.querySelector(
         "input[name='checkpassword']"
     );
-    const input_username = document.querySelector(
+    const input_username = join_form.querySelector(
         "input[name='username']"
     );
-    const input_userdate = document.querySelector(
+    const input_userdate = join_form.querySelector(
         "input[name='userdate']"
     );
-    const input_useraddr = document.querySelector(
+    const input_useraddr = join_form.querySelector(
         "input[name='useraddr']"
     );
-    const input_usertel = document.querySelector(
+    const input_usertel = join_form.querySelector(
         "input[name='usertel']"
     );
-    const input_useremail = document.querySelector(
+    const input_useremail = join_form.querySelector(
         "input[name='useremail']"
     );
 
@@ -70,8 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         // 비밀번호를 입력하고 확인 버튼을 안누르면 누르게끔 버튼 만들기
         // 회원가입 버튼을 눌렀을 때, 비번확인을 안누르면 누르게끔 만들기
-
-
 
 
         if (!txt_username) {
@@ -124,13 +124,13 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("사용가능한 ID 입니다.")
 
 
-        /*
 
         // 새로 입력하는 input_userid.value 의 값과 
         // db에 이미 저장된 userid 의 값이 같다면
         // 이미 있는 아이디라고 알림을 보내고 다시 입력하도록 만들기
         //--- db_userid : 데이터베이스에 저장되어있는 유저 아이디의 값.
 
+        /*
         const btn_checkid = document.querySelector("button.btn_userid");
         btn_checkid.addEventListener("click", () => {
          if(db_userid !== input_userid.value) {
@@ -144,12 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
          */
-
     });
-
-
-
-
 
     // 비밀번호 확인
     const btn_checkpw = document.querySelector("button.btn_pw");
@@ -167,7 +162,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return false;
         }
 
-
         // 비밀번호와 비밀번호 확인의 값이 일치하지 않으면 알림창이 뜨고 다시 입력하도록 함.
         // 일치하면 다음 입력칸인 이름 입력 박스로 커서 이동.
         if (input_checkpassword.value !== input_userpassword.value) {
@@ -181,5 +175,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
