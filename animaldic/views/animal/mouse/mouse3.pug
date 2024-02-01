@@ -1,0 +1,54 @@
+extends ../../layout
+
+block content
+    link(rel='stylesheet', href='/css/anisub.css')
+    link(rel='stylesheet', href='/css/section.css')
+    div
+        strong
+            p.name 햄스터
+
+        img(src="/images/햄스터.png", alt="")
+        ul.menu
+            li
+                a(href="#p1") 사육조건
+            li
+                a(href="#p2") 음식
+            li
+                a(href="#p3") 습성
+            li
+                a(href="#p4") 주의사항
+        span
+            article.box1
+                p#p1 
+                header.header
+                    strong 사육조건 
+                | 케이지를 자주 청소하여 항상 깨끗이 한다.
+                br
+                | 기니피그의 건강에 유익한 온도는 18도에서 23도까지이다.
+                br 
+                |  습기와 지나친 더위에 약하므로 주의하여야 한다.
+                br
+            article.box2
+                p#p2
+                header.header
+                    strong 음식
+                | 내용1
+                br
+                | 내용 2줄
+                br 
+            article.box3
+                p#p3 
+                header.header
+                    strong 습성
+                | 내용 1줄
+                br
+                | 내용 2줄
+                br 
+            article.box4
+                p#p4
+                header.header 
+                    strong 주의사항 
+                | 내용 1줄
+                br
+                | 내용 2줄
+                br 

@@ -1,0 +1,27 @@
+extends ../../layout
+
+block content
+    script(src="/js/check.js")
+    link(rel='stylesheet', href='/css/check.css')
+    link(rel='stylesheet', href='/css/home.css')
+    article
+        h3.checklist
+            strong CheckList
+                i.fa.fa-check-square
+        section.input.ckcss
+            input(placeholder="할일입력")
+            button 추가
+        section.list.ckcss
+            ul
+    h3.other Other Contents
+        i.fa.fa-plus-circle
+    div.etc.notwhitespace
+        article
+            a(href="/youtube")
+                img.youtube(src="images/youtube.png" alt="유튜브아이콘")
+                p 추천 영상
+        article
+            a(href="/survey")
+                img(src="images/survey.png")
+                p 나는 반려동물을 잘 키울 수 있을까?
+                p 스스로 체크해보자!

@@ -1,0 +1,35 @@
+extend layout
+
+
+block content
+    link(rel="stylesheet", href="./css/main.css")
+    section.hwamyeon
+    // 산책하기~같은 체크리스트
+    article
+        h3.checklist
+        strong
+            i.fas.fa-light.fa-calendar
+            | CheckList
+        section.input.ckcss
+        input(placeholder='할일입력')
+        button
+            | &#xCD94;&#xAC00;
+            i.fas.fa-solid.fa-feather
+        section.list.ckcss
+        ul
+        // input 섹션2개 end
+    article
+        p.psite
+        strong
+            i.fa-solid.fa-book-medical
+            | &#xD568;&#xAED8;&#xBCF4;&#xBA74; &#xC88B;&#xC740; &#xACF3;
+        .site.notwhitespace
+        a(href='https://pawinhand.kr/' target='new')
+            img.pawin(src='image/포인핸드.png' alt='포인핸드')
+            | &#xD3EC;&#xC778;&#xD578;&#xB4DC; : &#xC720;&#xAE30;&#xB3D9;&#xBB3C; &#xC785;&#xC591;
+        a(href='https://www.animal.go.kr/front/index.do' target='new')
+            img(src='image/국가동물.png' alt='포인핸드')
+            | &#xAD6D;&#xAC00;&#xB3D9;&#xBB3C;&#xBCF4;&#xD638;&#xC815;&#xBCF4;&#xC2DC;&#xC2A4;&#xD15C;
+        a(href='https://www.animal.go.kr/front/awtis/public/publicList.do?menuNo=1000000055' target='new')
+            | &#xC720;&#xAE30;&#xB3D9;&#xBB3C;&#xC870;&#xD68C;
+            i.fa-solid.fa-magnifying-glass

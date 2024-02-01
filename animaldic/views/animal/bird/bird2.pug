@@ -1,0 +1,52 @@
+extends ../../layout
+
+block content
+    link(rel='stylesheet', href='/css/anisub.css')
+    link(rel='stylesheet', href='/css/section.css')
+    div
+        strong
+            p.name 동물이름
+
+        img(src="", alt="")
+        ul.menu
+            li
+                a(href="#p1") 사육조건
+            li
+                a(href="#p2") 음식
+            li
+                a(href="#p3") 습성
+            li
+                a(href="#p4") 주의사항
+        span
+            article.box1
+                p#p1 
+                header.header
+                    strong 사육조건 
+                | 내용 1줄
+                br
+                | 내용 2줄
+                br 
+            article.box2
+                p#p2
+                header.header
+                    strong 음식
+                | 내용 1줄
+                br
+                | 내용 2줄
+                br 
+            article.box3
+                p#p3 
+                header.header
+                    strong 습성
+                | 내용 1줄
+                br
+                | 내용 2줄
+                br 
+            article.box4
+                p#p4
+                header.header 
+                    strong 주의사항 
+                | 내용 1줄
+                br
+                | 내용 2줄
+                br 
