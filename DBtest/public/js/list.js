@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const tbody = document.querySelector("table.books tbody");
+  const tbody = document.querySelector("table.list");
   tbody.addEventListener("click", (e) => {
     //target은 td 태그
     const target = e.target;

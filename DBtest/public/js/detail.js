@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btn_box = document.querySelector("div.btn");
+  const btn_box = document.querySelector("div.freebutton");
   btn_box.addEventListener("click", (e) => {
     const button = e.target;
     if (button.tagName === "BUTTON") {

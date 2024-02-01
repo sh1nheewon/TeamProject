@@ -1,29 +1,20 @@
-extends layout
+extends bbd
 
-block content
+block list_content
   link(rel="stylesheet", href="/css/free.css")
+  script(src="/js/list.js") 
   table
     thead 
       tr
         th
           strong  No. 
         th
-          strong  INSB
+          strong  제목
         th
-          strong  도서명
-        th
-          strong  저자
-        th
-          strong  출판사 
-        th
-          strong  가격
-        th
-          strong  할인가
+          strong  글쓴이
     tbody
       each book,index in books
         tr  
           td #{index+1}
-          td= book.author 
           td= book.title
-      div.btn
-        a(href="#") 도서등록
+          td= book.author 
