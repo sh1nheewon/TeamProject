@@ -1,0 +1,20 @@
+extends freeboard
+
+block list_content
+  link(rel="stylesheet", href="/css/free.css")
+  script(src="/js/list.js") 
+  table.list
+    thead 
+      tr
+        th
+          strong  No. 
+        th
+          strong  제목
+        th
+          strong  글쓴이
+    tbody
+      each book,index in books
+        tr(data-author=`${book.author}`) 
+          td #{index+1}
+          td= book.title
+          td= book.author 

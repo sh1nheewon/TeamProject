@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const parTr = target.closest("TR");
       const author = parTr.dataset.author;
 
-      document.location.replace(`freeboard/${author}/detail`);
+      document.location.replace(`${author}/detail`);
     }
   });
 });

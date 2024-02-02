@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
       let url = "/";
 
       if (className === "update") {
-        url += `freeboard/${author}/update`;
+        url += `${author}/update`;
       } else if (className === "delete") {
         if (!confirm("게시글을 삭제하겠습니까?")) {
           return false;
         }
-        url += `freeboard/${author}/delete`;
+        url += `${author}/delete`;
       } else if (className === "list") {
         url += "freeboard";
       }
