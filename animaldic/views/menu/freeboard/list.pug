@@ -13,8 +13,8 @@ block list_content
         th
           strong  글쓴이
     tbody
-      each book,index in books
-        tr(data-author=`${book.author}`) 
+      each bd,index in BBD
+        tr(data-num=`${bd.num}`) 
           td #{index+1}
-          td= book.title
-          td= book.author 
+          td= bd.title
+          td= bd.author 

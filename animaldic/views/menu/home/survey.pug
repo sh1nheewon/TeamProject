@@ -1,10 +1,10 @@
 extends ../../layout
 
 block content
-    link(rel="stylesheet", href="/css/survey.css")
     script(src="/js/survey.js")
+    link(rel="stylesheet", href="/css/survey.css")
     .survey
-        h1.survet1 나는 반려동물을 잘 키울 수 있을까?
+        h1.surveyh1 나는 반려동물을 잘 키울 수 있을까?
         form
             p 1. 반려동물을 키우는데에 가족들의 반대가 없다.
             input(type="radio" name="question1" id="question1_yes" value="yes")
@@ -38,4 +38,4 @@ block content
             |  아니오 
             br
             button(type="button" onclick="calculateScore()") 결과확인
-        div#result
+        #result

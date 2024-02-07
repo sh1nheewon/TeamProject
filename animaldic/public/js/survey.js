@@ -37,7 +37,7 @@ function calculateScore() {
     // 3~4점
     document.getElementById("result").innerHTML = score + "점 : 아쉽네요.. 조금더 노력이 필요합니다";
   } else if (score == 5) {
-    // 4~5점
+    // 5점
     document.getElementById("result").innerHTML = score + "점 : 조금더 노력하면 반려동물을 키울 수 있겠네요!";
   } else {
     // 만점 6점

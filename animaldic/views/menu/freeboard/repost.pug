@@ -6,12 +6,12 @@ block content
     h2.free 게시글 수정하기
       main
         form.write(method="POST")
-          input(type='text'  name="title" required='' value=`${book.title}`)
+          input(type='text'  name="title" required='' value=`${bd.title}`)
           hr
-          textarea.text(name="content")=book.content
+          textarea.text(name="content")=bd.content
           div.free
             div.user
-                input(type="text" name="author" readonly value=`${book.author}`)
-            div.freebutton(data-author=`${book.author}`)
-                button.repost(data-author=`${book.author}`) 재게시
+                input(type="text" name="num" readonly value=`${bd.num}`)
+            div.freebutton(data-num=`${bd.num}`)
+                button.repost(data-num=`${bd.num}`) 재게시
                 button.return 돌아가기

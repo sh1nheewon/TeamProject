@@ -4,21 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = e.target;
     if (button.tagName === "BUTTON") {
       const className = button.className;
-      //const author = button.dataset.author;
+      //const num = button.dataset.num;
 
-      //버튼들을 감싸고 있는 박스 태그에 부착된 데이터 author 값을 가져오기.
+      //버튼들을 감싸고 있는 박스 태그에 부착된 데이터 num 값을 가져오기.
       const parDIV = button.closest("DIV");
-      const author = parDIV.dataset.author;
+      const num = parDIV.dataset.num;
 
       let url = "/";
 
       if (className === "update") {
-        url += `freeboard/${author}/update`;
+        url += `freeboard/${num}/update`;
       } else if (className === "delete") {
         if (!confirm("게시글을 삭제하겠습니까?")) {
           return false;
         }
-        url += `freeboard/${author}/delete`;
+        url += `freeboard/${num}/delete`;
       } else if (className === "list") {
         url += "freeboard";
       }

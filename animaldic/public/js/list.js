@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const target = e.target;
     if (target.tagName === "TD") {
       const parTr = target.closest("TR");
-      const author = parTr.dataset.author;
+      const num = parTr.dataset.num;
 
-      document.location.replace(`freeboard/${author}/detail`);
+      document.location.replace(`freeboard/${num}/detail`);
     }
   });
 });

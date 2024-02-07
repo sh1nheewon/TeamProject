@@ -1,3 +1,39 @@
 extends ../layout
 
 block content
+
+    link(rel="stylesheet", href="/css/join.css")
+    script(src="/js/join.js")
+    form.join(method="POST")
+        fieldset 
+            legend 회원가입
+            div
+                label(for="") 사용자 ID
+                input(type="text", name="userid", id="userid" )
+                button.btn_userid(type="button",id="btn_userid") 중복확인
+            div
+                label(for="") 비밀번호
+                input(type="password", name="userpassword", id="userpassword")
+            div
+                label(for="") 비밀번호 확인
+                input(type="password", name="checkpassword", id="checkpassword")
+                button.btn_pw(type="button",id="btn_pw") 비밀번호확인
+            div
+                label(for="") 사용자 이름
+                input(type="text", name="username", id="username")
+            div
+                label(for="") 생년월일
+                input(type="text", name="userdate", id="userdate")
+            div
+                label(for="") 주소
+                input(type="text", name="useraddr", id="useraddr")
+            div
+                label(for="") 전화번호
+                input(type="text", name="usertel", id="usertel")
+            div
+                label(for="") 이메일
+                input(type="text", name="useremail", id="useremail")
+
+            div.btn_join
+                label(for="") 
+                button.btn_join(type="button",id="btn_join") 회원가입

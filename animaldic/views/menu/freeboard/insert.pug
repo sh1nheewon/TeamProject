@@ -2,16 +2,19 @@ extend ../../layout
 
 block content
     link(rel="stylesheet", href="/css/free2.css")
+    script(src="/js/insert.js") 
     h2.free 자유게시판 글 쓰기
       main
-        form.write(method="POST")
+        form.write(method="POST",enctype="multipart/form-data")
           input(type='text' name="title" placeholder='제목을 입력해주세요.' required='')
           hr
           textarea.text(name="content" placeholder='내용을 입력해주세요.')
           div.free
             div.user
-                input(type="text" name="author" placeholder='글쓴이')
-                input(type="password" name='password' placeholder='비밀번호')
+                input(type="text" name="author" placeholder='ID')
+                input(type="password" name='password' placeholder='PASSWORD')
+                input(type="file" name="p_image" accept="image/*" id="p_image")
             div.freebutton
-                input.btn(type="submit", value= "추가")
+                input.btn.btn_post(type="button", value= "게시")
                 input.btn(type="reset", value= "새로 작성")
+                input.btn.btn_list(type="button", value="돌아가기")
