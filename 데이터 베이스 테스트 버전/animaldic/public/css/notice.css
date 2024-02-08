@@ -1,0 +1,32 @@
+.all-announce {
+  margin: 0;
+  padding: 50px;
+  background-color: lightgray;
+  text-align: center;
+}
+.title {
+  font-size: 50px;
+}
+
+div.title {
+  font-size: 2rem;
+}
+span.number {
+  font-size: 2rem;
+}
+
+.all-announce > h1,
+.announce {
+  margin: 10px;
+  padding: 5px;
+}
+
+.announce {
+  background: white;
+}
+
+.announce > h2,
+p {
+  margin: 4px;
+  font-size: 90%;
+}

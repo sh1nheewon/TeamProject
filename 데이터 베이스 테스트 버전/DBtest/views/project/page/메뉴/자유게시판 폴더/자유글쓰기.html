@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="./free2.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <strong>자유게시판 글쓰기</strong>
+      </h1>
+    </header>
+    <ul class="MENU">
+      <li>
+        <a href=".../홈메뉴.html">HOME<i class="fa-solid fa-house"></i></a>
+      </li>
+      <li>
+        <a href="../자유게시판.html">자유게시판<i class="fa-solid fa-comment"></i></a>
+      </li>
+      <li>
+        <a href="../공지사항.html">공지사항<i class="fa-solid fa-thumbtack"></i></a>
+      </li>
+      <li>
+        <a href="./로그인.html">로그인<i class="fa-solid fa-arrow-right"></i></a>
+      </li>
+      <li>
+        <a href="./회원가입.html">회원가입<i class="fas fa-solid fa-user-plus"></i></a>
+      </li>
+    </ul>
+    <section>
+      <main>
+        <form class="write">
+          <input type="text" placeholder="제목을 입력해주세요." required />
+          <hr />
+          <textarea placeholder="내용을 입력해주세요." class="text"></textarea>
+          <div class="button">
+            <p><a class="post" href="../자유게시판.html">게시하기</a><a href="자유글쓰기.html">취소</a></p>
+          </div>
+        </form>
+      </main>
+    </section>
+  </body>
+  <script src="자유게시판.js"></script>
+</html>

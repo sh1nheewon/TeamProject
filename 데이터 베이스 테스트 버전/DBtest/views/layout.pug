@@ -1,0 +1,151 @@
+doctype html 
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title &#xBC18;&#xB824;&#xB3D9;&#xBB3C;&#xBC31;&#xC11C;
+  // 이걸먼저적용시켜서 안무너지게
+  link(rel='stylesheet' href='./css/check.css')
+  // 아이콘js주소
+  script(src='https://kit.fontawesome.com/9b331147db.js' crossorigin='anonymous')
+  link(rel='stylesheet' href='./css/main.css')
+  script(src='./js/check.js')
+  script(src="/js/menu.js") 
+  // checklist js
+// header 눌러서 홈으로 가게
+a.ha(href='')
+  header
+    h1
+      | &#xBC18;&#xB824;&#xB3D9;&#xBB3C; &#xBC31;&#xC11C;
+      i.fa-solid.fa-book
+// @@@@@@@일반메뉴@@@@@@@
+ul.MENU
+  li
+    a(href='홈메뉴')
+      | HOME
+      i.fa-solid.fa-house
+  li
+    a(href='./메뉴/자유게시판')
+      | &#xC790;&#xC720;&#xAC8C;&#xC2DC;&#xD310;
+      i.fa-solid.fa-comment
+  li
+    a(href='./메뉴/공지사항')
+      | &#xACF5;&#xC9C0;&#xC0AC;&#xD56D;
+      i.fa-solid.fa-thumbtack
+  li
+    a(href='./메뉴/로그인')
+      | &#xB85C;&#xADF8;&#xC778;
+      i.fa-solid.fa-arrow-right
+  li
+    a(href='./메뉴/회원가입')
+      | &#xD68C;&#xC6D0;&#xAC00;&#xC785;
+      i.fas.fa-solid.fa-user-plus
+// @@@@@@@일반메뉴 end@@@@@@@
+// 소식
+ul.alrim
+  li.alrim
+    a(href='https://vpet.co.kr/category/%ED%8C%8C%EC%86%90%EC%9C%A0%ED%86%B5%EA%B8%B0%ED%95%9C%EC%9E%84%EB%B0%95/441/' target='new')
+      i.fa-solid.fa-bell
+      strong &#xD30C;&#xC190;/&#xC784;&#xBC15; &#xC0C1;&#xD488; &#xC138;&#xC77C;&#xC911; &#x25B6; &#xBE0C;&#xC774;&#xD3AB; &#xBC14;&#xB85C;&#xAC00;&#xAE30;
+    i.fa-solid.fa-bell
+// 소식 end
+// ********동물메뉴*****
+.nanugi
+  .dropdown_menu
+    ul#gnb
+      h4 animals
+      li
+        a.notwhitespace
+          img.b_animal(src='/animal/설치류.png' alt='설치류')
+          | &#xC124;&#xCE58;&#xB958;
+        // 서브메뉴1
+        ul.sub_menu.notwhitespace
+          li
+            a(href='./동물하위메뉴/설치류/설치류1')
+              img.b_animal.anima(src='/animal/설치류.png' alt='설치류1')
+            | &#xB3D9;&#xBB3C;1
+          li
+            a(href='./동물하위메뉴/설치류/설치류2')
+              img.b_animal.anima(src='/animal/설치류.png' alt='설치류2')
+            | &#xB3D9;&#xBB3C;2
+          li
+            a(href='./동물하위메뉴/설치류/설치류3')
+              img.b_animal.anima(src='/animal/설치류.png' alt='설치류3')
+            | &#xB3D9;&#xBB3C;3
+      li
+        a.notwhitespace
+          img.b_animal(src='/animal/어류.png' alt='어류')
+          | &#xC5B4;&#xB958;
+        // 서브메뉴2
+        ul.sub_menu.notwhitespace
+          li
+            a(href='./동물하위메뉴/어류/어류1')
+              img.b_animal.anima(src='/animal/어류.png' alt='어류1')
+            | &#xB3D9;&#xBB3C;1
+          li
+            a(href='./동물하위메뉴/어류/어류2')
+              img.b_animal.anima(src='/animal/어류.png' alt='어류2')
+            | &#xB3D9;&#xBB3C;2
+          li
+            a(href='./동물하위메뉴/어류/어류3')
+              img.b_animal.anima(src='/animal/어류.png' alt='어류3')
+            | &#xB3D9;&#xBB3C;3
+      li
+        a.notwhitespace
+          img.b_animal(src='/animal/조류.png' alt='조류')
+          | &#xC870;&#xB958;
+        // 서브메뉴3
+        ul.sub_menu.notwhitespace
+          li
+            a(href='./동물하위메뉴/조류/조류1')
+              img.b_animal.anima(src='/animal/조류.png' alt='조류1')
+            | &#xB3D9;&#xBB3C;1
+          li
+            a(href='./동물하위메뉴/조류/조류2')
+              img.b_animal.anima(src='/animal/조류.png' alt='조류2')
+            | &#xB3D9;&#xBB3C;2
+          li
+            a(href='./동물하위메뉴/조류/조류3')
+              img.b_animal.anima(src='/animal/조류.png' alt='조류3')
+            | &#xB3D9;&#xBB3C;3
+      li
+        a.notwhitespace
+          img.b_animal(src='image/snake.jpg' alt='파충류')
+          | &#xD30C;&#xCDA9;&#xB958;
+        // 서브메뉴3
+        ul.sub_menu.notwhitespace
+          li
+            a(href="ani1")
+              img.b_animal.anima(src='animal/포인핸드.png' alt='파충류1')
+            | 뱀
+          li
+            a(href='ani2')
+              img.b_animal.anima(src='/animal/파충류.png' alt='파충류2')
+            | 거북이
+          li
+            a(href='ani3')
+              img.b_animal.anima(src='/animal/파충류.png' alt='파충류3')
+            | 도마뱀
+      li
+        a.notwhitespace
+          img.b_animal(src='/animal/포유류.png' alt='포유류')
+          | &#xD3EC;&#xC720;&#xB958;
+        // 서브메뉴3
+        ul.sub_menu.notwhitespace
+          li
+            a(href='./동물하위메뉴/포유류/포유류1')
+              img.b_animal.anima(src='/animal/포유류.png' alt='포유류1')
+            | &#xB3D9;&#xBB3C;1
+          li
+            a(href='./동물하위메뉴/포유류/포유류2')
+              img.b_animal.anima(src='/animal/포유류.png' alt='포유류2')
+            | &#xB3D9;&#xBB3C;2
+          li
+            a(href='./동물하위메뉴/포유류/포유류3')
+              img.b_animal.anima(src='/animal/포유류.png' alt='포유류3')
+            | &#xB3D9;&#xBB3C;3
+  // ********동물메뉴 끝*****
+  // ****이 섹션이 이제 화면전환시 변할곳
+  section.hwamyeon 
+    block content 
+
+    endblock

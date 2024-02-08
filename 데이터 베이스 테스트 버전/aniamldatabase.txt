@@ -1,0 +1,87 @@
+CREATE DATABASE aniamlDB;
+USE animalDB;
+
+-- 동물정보 tbl
+CREATE TABLE tbl_animal (a_name	VARCHAR(20)		PRIMARY KEY,
+a_condition	VARCHAR(300)	NOT NULL,	
+a_food	VARCHAR(300)	NOT NULL,	
+a_habit	VARCHAR(300)	NOT NULL,	
+a_caution	VARCHAR(300)	NOT NULL	
+);
+-- ---------------------------------
+-- 동물테이블 import 확인용
+SELECT * FROM tbl_animal;
+-- --------------------------------------------------
+
+-- 회원정보 tbl
+CREATE TABLE tbl_members (
+m_username	VARCHAR(15)		PRIMARY KEY,
+m_password	VARCHAR(125)	NOT NULL,	
+m_realname	VARCHAR(20),
+m_tel	VARCHAR(15),		
+m_role	VARCHAR(5)		
+);
+
+
+-- 홈체크리스트 tbl
+CREATE TABLE tbl_check (
+u_user	VARCHAR(15)	PRIMARY KEY,
+u_check	VARCHAR(100)	NOT NULL
+);
+
+-- ---------------
+-- 공지사항 tbl
+CREATE TABLE tbl_notice (n_director	VARCHAR(20)		PRIMARY KEY,
+n_viewer	VARCHAR(20),	
+n_caution	VARCHAR(200)		
+);
+
+-- 자유게시판 tbl
+CREATE TABLE tbl_bbd (num	BIGINT	NOT NULL,		
+author	VARCHAR(150)	PRIMARY KEY,	
+password	VARCHAR(150)	NOT NULL,	
+title	VARCHAR(150)	NOT NULL,	
+content	TEXT	NOT NULL	
+);
+-- ***!!! FK 연결용 data ***--------------------------
+-- fk 연결 및 확인용 테이블 기본내용 생성
+-- fk 동일해야함 callor
+INSERT INTO tbl_members (m_username,m_password)
+VALUES ('callor','12341234');
+INSERT INTO tbl_check (u_user, u_check)
+VALUES('callor','털정리');
+INSERT INTO tbl_notice (n_director,n_caution)
+VALUES ('callor','주의사항 내용');
+INSERT INTO tbl_bbd (num,author,password,title,content)
+VALUES ('1','callor','1234','게시글 제목','게시글 내용');
+
+-- -------------------------
+
+-- ---------------------------
+-- FK 연결하기
+
+-- tbl_check FK
+-- 회원정보 tbl의 m_username 기준으로 fk
+ALTER TABLE tbl_members
+ADD CONSTRAINT FK_CUSER
+FOREIGN KEY (m_username)
+REFERENCES tbl_check(u_user);
+-- -----
+
+-- tbl_notice FK
+-- 회원정보 tbl의 m_username 기준으로 fk
+ALTER TABLE tbl_members
+ADD CONSTRAINT FK_NUSER
+FOREIGN KEY (m_username)
+REFERENCES tbl_notice(n_director);
+
+-- tbl_bbd FK
+-- 회원정보 tbl의 m_username 기준으로 fk
+ALTER TABLE tbl_members
+ADD CONSTRAINT FK_BUSER
+FOREIGN KEY (m_username)
+REFERENCES tbl_bbd(author);
+
+
+
+
