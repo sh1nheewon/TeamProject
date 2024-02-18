@@ -1,5 +1,5 @@
-import {Model} from 'sequelize';
-
+import _sequelize from 'sequelize';
+const { Model, Sequelize } = _sequelize;
 
 export default class tbl_members extends Model {
   static init(sequelize, DataTypes) {

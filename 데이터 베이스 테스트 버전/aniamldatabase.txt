@@ -47,7 +47,7 @@ content	TEXT	NOT NULL
 -- fk 연결 및 확인용 테이블 기본내용 생성
 -- fk 동일해야함 callor
 INSERT INTO tbl_members (m_username,m_password)
-VALUES ('callor','12341234');
+VALUES ('callor','1234');
 INSERT INTO tbl_check (u_user, u_check)
 VALUES('callor','털정리');
 INSERT INTO tbl_notice (n_director,n_caution)

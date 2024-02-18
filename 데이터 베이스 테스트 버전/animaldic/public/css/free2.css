@@ -173,3 +173,10 @@ div.free{
     }
   }
   
+
+  input[type="file"] {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    
+}
