@@ -1,52 +1,52 @@
-import {Model} from 'sequelize';
-
+import { Model } from "sequelize";
 
 export default class tbl_bbd extends Model {
   static init(sequelize, DataTypes) {
-  return super.init({
-    num: {
-      type: DataTypes.BIGINT,
-      allowNull: false,
-      primaryKey: true
-    },
-    author: {
-      type: DataTypes.STRING(150),
-      allowNull: false
-    },
-    password: {
-      type: DataTypes.STRING(150),
-      allowNull: false
-    },
-    title: {
-      type: DataTypes.STRING(150),
-      allowNull: false
-    },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
-    image_name: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
-    image_origin_name: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    }
-  }, {
-    sequelize,
-    tableName: 'tbl_bbd',
-    timestamps: false,
-    indexes: [
+    return super.init(
       {
-        name: "PRIMARY",
-        unique: true,
-        using: "BTREE",
-        fields: [
-          { name: "num" },
-        ]
+        num: {
+          type: DataTypes.BIGINT,
+          allowNull: false,
+          primaryKey: true,
+        },
+        author: {
+          type: DataTypes.STRING(15),
+          allowNull: false,
+        },
+        password: {
+          type: DataTypes.STRING(125),
+          allowNull: false,
+        },
+        title: {
+          type: DataTypes.STRING(150),
+          allowNull: false,
+        },
+        content: {
+          type: DataTypes.TEXT,
+          allowNull: false,
+        },
+        image_name: {
+          type: DataTypes.STRING(255),
+          allowNull: true,
+        },
+        image_origin_name: {
+          type: DataTypes.STRING(255),
+          allowNull: true,
+        },
       },
-    ]
-  });
+      {
+        sequelize,
+        tableName: "tbl_bbd",
+        timestamps: false,
+        indexes: [
+          {
+            name: "PRIMARY",
+            unique: true,
+            using: "BTREE",
+            fields: [{ name: "num" }],
+          },
+        ],
+      }
+    );
   }
 }
