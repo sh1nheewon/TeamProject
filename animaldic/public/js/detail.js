@@ -1,28 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btn_box = document.querySelector("div.freebutton");
-  btn_box.addEventListener("click", (e) => {
-    const button = e.target;
-    if (button.tagName === "BUTTON") {
-      const className = button.className;
-      //const num = button.dataset.num;
+  const user = '<%= user %>'; // 세션에서 user 정보를 가져옵니다.
+  const password = document.querySelector("input[name='password']");
+  const form = document.querySelector("form.write");
+  const btn_update = form.querySelector(".btn.update");
+  const btn_delete = form.querySelector(".btn.delete");
+  const btn_list = form.querySelector(".btn_list");
 
-      //버튼들을 감싸고 있는 박스 태그에 부착된 데이터 num 값을 가져오기.
-      const parDIV = button.closest("DIV");
-      const num = parDIV.dataset.num;
+  btn_update.addEventListener("click", () => {
+    const parDIV = btn_update.closest("DIV");
+    const num = parDIV.dataset.num;
 
-      let url = "/";
+    document.location.replace(`/freeboard/${num}/update`);
+  });
 
-      if (className === "update") {
-        url += `freeboard/${num}/update`;
-      } else if (className === "delete") {
-        if (!confirm("게시글을 삭제하겠습니까?")) {
-          return false;
-        }
-        url += `freeboard/${num}/delete`;
-      } else if (className === "list") {
-        url += "freeboard";
-      }
-      document.location.replace(url);
+  btn_delete.addEventListener("click", (e) => {
+    const parDIV = btn_delete.closest("DIV");
+    const num = parDIV.dataset.num;
+
+    if (!confirm("게시글을 삭제하겠습니까?")) {
+      return false;
     }
+
+    if (!user && !password.value) {
+      alert("비밀번호를 작성해주세요");
+      password.select();
+      return false;
+    }
+    form.submit();
+  });
+
+  btn_list.addEventListener("click", () => {
+    document.location.replace("/freeboard");
   });
 });

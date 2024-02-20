@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const input_password = login_form.querySelector("input.password");
   const btn_login = login_form.querySelector("input.btn_login");
 
-  btn_login.addEventListener("click", () => {
+  btn_login.addEventListener("click", (e) => {
+    const target = e.target;
     if (!input_username.value) {
       alert("ID를 입력해주세요");
       input_username.select();
@@ -14,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("비밀번호를 입력해주세요");
       input_password.select();
       return false;
+    }
+    if (target.value === "회원가입") {
+      return (document.location.href = "/join");
+    }
+    if (target.value === "아이디비밀번호찾기") {
+      return (document.location.href = "/find");
     }
     login_form.submit();
   });

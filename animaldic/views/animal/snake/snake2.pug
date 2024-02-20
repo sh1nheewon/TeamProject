@@ -5,7 +5,7 @@ block content
     link(rel='stylesheet', href='/css/section.css')
     div
         strong
-            p.name 거북이
+            p.name= adata.a_name
 
         img(src="/images/turtle.jpg", alt="")
         ul.menu
@@ -22,35 +22,19 @@ block content
                 p#p1 
                 header.header
                     strong 사육조건 
-                | 육지 거북, 습지 거북, 반수생 거북, 완전 수생 거북이 필요한 사육장 환경이 다 다르다.
-                br
-                | 반수생 거북 : 사육장, 물, 육지 공간, 여과기, 조명, 히팅 장치
-                | 육지 거북 : 사육장, 히팅 장치, 자동 온도 조절기, 밥그릇, 물그릇, 은신처, UVB, 바닥재
-                br 
+                p= adata.a_condition
             article.box2
                 p#p2
                 header.header
                     strong 음식
-                | 거북이 전용 사료, 육식, 채소 등. 1줄
-                br
-                | 육지 거북은 잡식을 하는 종도 있지만 일반적으로 채식을 하는 종이 대부분이다.
-                | 자세한 사항은 본인이 키우는 종에 따라 찾아보는 것이 좋음.
-                br 
+                p= adata.a_food
             article.box3
                 p#p3 
                 header.header
                     strong 습성
-                | 일부 종을 제외하고 대부분이 평온하고 차분한 성격을 가지고 있다.
-                br
-                | 주기적으로 탈피를 한다.
-                | 육지 거북, 습지 거북, 반수생 거북, 완전 수생 거북으로 분류된다. 완전 수생은 일반 가정집에서 키우기는 어렵다.
-                br 
+                p= adata.a_habit
             article.box4
                 p#p4
                 header.header 
                     strong 주의사항 
-                | 탈피 중엔 최대한 접촉을 피하며 탈피를 하고 난 후의 거북이 등딱지는 말랑말랑하니 주의가 필요하다.
-                br
-                | 거북이는 종에 따라 식성이 다르지만 보편적으로 피해야 하는 음식으로는 유제품, 일부 야채(옥살산염이 들어가있는 식물),
-                | 아보카도, 설탕, 당도.산성도가 높은 일부 과일, 개 혹은 고양이 사료, 기타 가공식품 등이 있다.
-                br 
+                p= adata.a_caution

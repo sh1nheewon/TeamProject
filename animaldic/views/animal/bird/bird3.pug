@@ -5,7 +5,7 @@ block content
     link(rel='stylesheet', href='/css/section.css')
     div
         strong
-            p.name 십자매
+            p.name= adata.a_name
 
         img(src="/images/animal/십자매.webp", alt="")
         ul.menu
@@ -22,31 +22,19 @@ block content
                 p#p1 
                 header.header
                     strong 사육조건 
-                | 좁은 새장도 상관없으나 기본적으로 잘 날아다니므로 
-                br
-                | 새장은 넓을수록 좋다
-                br 
+                p= adata.a_condition
             article.box2
                 p#p2
                 header.header
                     strong 음식
-                | 벌래+알곡모이가 가장 좋으나 형편상 곤란할 경우
-                br
-                | 곡류에 계란껍데기,야채라도 챙겨줘야 한다
-                br 
+                p= adata.a_food
             article.box3
                 p#p3 
                 header.header
                     strong 습성
-                | 성질이 온순하고 새장에 여러마리를 넣어도 자매처럼 친하게 지낸다
-                br
-                | 
-                br 
+                p= adata.a_habit
             article.box4
                 p#p4
                 header.header 
                     strong 주의사항 
-                | 소음이나 입질, 털문제도 적은 편
-                br
-                | 
-                br 
+                p= adata.a_caution

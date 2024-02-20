@@ -2,19 +2,18 @@ extends freeboard
 
 block list_content
   link(rel="stylesheet", href="/css/free.css")
-  script(src="/js/list.js") 
+  script(src="/js/freeboard.js") 
   table.list
     thead 
       tr
-        th
-          strong  No. 
-        th
-          strong  제목
-        th
-          strong  글쓴이
+        th No.
+        th 제목
+        th 글쓴이
+        th 게시일자
     tbody
       each bd,index in BBD
         tr(data-num=`${bd.num}`) 
           td #{index+1}
           td= bd.title
           td= bd.author 
+          td= bd.date

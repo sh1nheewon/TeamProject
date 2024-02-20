@@ -5,7 +5,7 @@ block content
     link(rel='stylesheet', href='/css/section.css')
     div
         strong
-            p.name 도마뱀
+            p.name= adata.a_name
 
         img(src="/images/chameleon.jpg", alt="")
         ul.menu
@@ -22,34 +22,19 @@ block content
                 p#p1 
                 header.header
                     strong 사육조건 
-                | 사육장, 바닥재, 은신처, 밥그릇, 물그릇, 열원, 핀셋, 영양제, 온습도계
-                br
-                | 온도는 30도, 습도는 40~ 50으로 맞춰주면 적당하다.
-                br 
+                p= adata.a_condition
             article.box2
                 p#p2
                 header.header
                     strong 음식
-                |   도마뱀 사료, 살아있는 귀뚜라미나 밀웜이 주식.
-                br
-                | 도마뱀은 잡식성이 많기 때문에 과일이나 채소, 때로 육류를 주기도 한다.
-                | 종마다 식성이 다르기 때문에 자세한 것은 찾아보는 것이 좋음.
-                br 
+                p= adata.a_food
             article.box3
                 p#p3 
                 header.header
                     strong 습성
-                | 도마뱀들은 대부분 낮에 활동하고 밤에 잠을 자는 주행성이다.
-                br
-                | 눈꺼풀이 있는 종류 와 없는 종류 모두 눈이나 입 주변을 핥아 청소하는 습성이 있음.
-                | 주기적으로 탈피를 한다.
-                br 
+                p= adata.a_habit
             article.box4
                 p#p4
                 header.header 
                     strong 주의사항 
-                | 개나 고양이 음식, 독성이 있는 식이는 먹이면 안된다. 반딧불 같은 경우도 독성이 있으니 주의. 과일 같은 경우는 가끔씩이면 괜찮다.
-                br
-                | 위협을 느끼면 꼬리를 자른다. 잘린 꼬리는 다시 자라남.
-                | 눈병에 걸리기 쉽다.
-                br 
+                p= adata.a_caution

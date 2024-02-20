@@ -1,0 +1,12 @@
+extends ../../layout
+
+block content
+    link(rel='stylesheet', href='/css/myanimal.css')
+    h1.addanimal 나의 반려동물 정보
+    form(method="POST",enctype="multipart/form-data") 
+        div.myanimalinput 
+            input(type="text",name="ma_animalname",placeholder="반려동물 이름은?",value=`${myanimal ? myanimal.ma_animalname:""}`)
+            input(type="text",name="ma_age",placeholder="나이는?",value=`${myanimal ? myanimal.ma_age:""}`)
+            input.int(type="text",name="ma_memo",placeholder="반려동물 소개글",value=`${myanimal ? myanimal.ma_memo:""}`)
+            input(type="file",name="ma_image",accept="image/*")
+            input.save(type="submit", value="저장")

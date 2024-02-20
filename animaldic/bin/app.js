@@ -11,6 +11,8 @@ import express from "express";
 import createError from "http-errors";
 import path from "path";
 import helmet from "helmet";
+// session 도구 import  <<<<<<<<
+import session from "express-session";
 
 // 3rd party lib modules
 import cookieParser from "cookie-parser";
@@ -20,6 +22,7 @@ import logger from "morgan";
 import indexRouter from "../routes/index.js";
 import usersRouter from "../routes/users.js";
 import freeRouter from "../routes/free.js";
+import noticeRouter from "../routes/notice.js";
 
 // create express framework
 const app = express();
@@ -41,10 +44,28 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join("public")));
 
+app.use(
+  session({
+    key: "callor", // 식별자, 브라우저에 저장될 cookie 이름
+    secret: "callor@callor.com", // SessionID 암호화용 키 아무말
+    cookie: {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60, // 1분, 1시간 //유효시간        지나면자동삭제
+    },
+  })
+);
+
+app.use((req, res, next) => {
+  //공통라우터
+  res.locals = req.session; // 응답의 로케이션에 세션정보를 저장한다
+  next();
+});
+
 // router link enable, link connection
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/freeboard", freeRouter);
+app.use("/nwrite", noticeRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

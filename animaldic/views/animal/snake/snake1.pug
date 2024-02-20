@@ -5,7 +5,7 @@ block content
     link(rel='stylesheet', href='/css/section.css')
     div
         strong
-            p.name 뱀
+            p.name= adata.a_name
 
         img(src="/images/snake.jpg", alt="뱀")
         ul.menu
@@ -22,35 +22,19 @@ block content
                 p#p1 
                 header.header
                     strong 사육조건 
-                | 뱀 크기에 맞는 잠금이 가능한 사육장, 바닥재, 물그릇, 은신처, 열원.
-                br
-                | 사육장에 보이는 배설물들은 그때마다 바로 치워주는 것이 좋으며 청소는 일주일에 한 번, 
-                | 적어도 한달에 한 번은 대청소를 해주어야 한다.
-                br 
+                p= adata.a_condition
             article.box2
                 p#p2
                 header.header
                     strong 음식
-                | 머리 넓이에 맞는 마우스, 랫이나 병아리, 메추라기가 주식.
-                br
-                | 한 번 먹이를 주면 당분간은 소화시킬 기간이 필요하다.
-                | 먹이를 주는 적당한 기간은 1~2주.
-                br 
+                p= adata.a_food
             article.box3
                 p#p3 
                 header.header
                     strong 습성
-                |   뱀은 감각기관이 발달한 동물은 아니기 때문에 혀를 이용하여 상황을 식별한다.
-                br
-                |  종에 따라 야행성, 주행성으로 나뉜다.
-                |  주기적으로 탈피를 한다.
-                br 
+                p= adata.a_habit
             article.box4
                 p#p4
                 header.header 
                     strong 주의사항 
-                | 살아있는 쥐같은 것을 먹이를 주는 경우가 있으나 이 때는 뱀이 쥐에게 물려 죽을 수도 있으니 주의가 필요함.
-                br
-                | 합사는 권장하지 않는다. 1 마리당 사육장 1개씩이 필요함.
-                | 탈피를 할 때는 예민해진다. 이 시기엔 최대한 접촉을 피하며 탈피 과정 중 문제가 있을 시에만 개입하도록 한다.
-                br 
+                p= adata.a_caution

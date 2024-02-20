@@ -198,38 +198,146 @@ img.pawin {
 p.psite {
   text-align: center;
 }
-p.res {
-  text-align: center;
-  margin-top: 5px;
-}
-article.movie {
-  border: 3px solid red;
-  border-radius: 5px;
-}
-
-div.youtube1,
-div.youtube2 {
+footer.mf {
+  border: 5px solid #00dad6;
+  background-color: #c5fffa;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
   display: flex;
-}
-
-article.movie1,
-article.movie2 {
-  margin-left: 20px;
-}
-
-article.movie1-2,
-article.movie2-2 {
-  display: none;
-}
-
-@media screen and (min-width: 1200px) {
-  article.movie1-2,
-  article.movie2-2 {
+  text-align: center;
+  a {
+    flex: 1;
     display: block;
+    margin: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: 0.7s;
+    &:hover {
+      background-color: #00dad6;
+      color: white;
+      border-radius: 10px;
+    }
   }
-  article.movie1,
-  article.movie2 {
-    margin-left: 120px; /* 화면커지면.. 다른영상2개더 보이고
-    원래보이던 영상을 옆으로 옮겨서 보기좋게 */
+}
+
+img {
+  margin-top: 20px;
+}
+img.youtube {
+  border-radius: 10px;
+  width: 180px;
+  height: 100px;
+  margin-top: 30px;
+}
+div.etc {
+  display: flex;
+
+  margin: 0 20px 20px 20px;
+}
+div.etc article {
+  border: 5px solid pink;
+  border-radius: 10px;
+  a {
+    display: block;
+    text-align: center;
+
+    text-decoration: none;
+    color: black;
   }
+}
+h3.other {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+div.etc article a img:hover {
+  opacity: 0.7;
+}
+.fa {
+  /* 아이콘 옆으로띄우기 */
+  margin-left: 5px;
+}
+
+.fa-bell {
+  color: orange;
+}
+
+ul#gnb {
+  font-weight: bold;
+}
+
+a.logout {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 로그인 시에 나올것들 */
+div.mypet {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid #00dad6;
+}
+/* 이미지, 글 구분칸 */
+div.mypetinform {
+  /* border: 3px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: right; /* 추가수정버튼은 오른쪽구석에 */
+  width: 100%;
+  margin-right: 15px;
+  p {
+    text-align: center;
+    padding: 5px;
+    border: 3px solid pink;
+    border-radius: 10px;
+    margin: 3px;
+  }
+
+}
+div.divdiv{
+  p{
+    border: 5px solid yellowgreen;
+    width: 100%;
+    height: 100%;
+  }
+ article {
+  display: flex;
+  p{
+    border: 2px solid pink;
+  margin: 5px;}
+}
+}
+
+section.list ul li button {
+  margin-left: auto;
+  width: 25px;
+  border-radius: 50px;
+  /* border: solid #00dad6; */
+  background-color: #00dad6;
+  i{
+
+    color: white
+  }
+  &:hover{
+    background-color: white;
+    cursor: pointer;
+    i{
+      color: red
+    }
+  }
+  
+}
+
+img.mypetimg {
+  width: 250px;
+  height: 250px;
+  border: 3px solid pink;
+  border-radius: 50%;
+  margin-bottom: 10px; /* 나중에뺄까*/
 }

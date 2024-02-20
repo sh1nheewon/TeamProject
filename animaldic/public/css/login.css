@@ -29,13 +29,13 @@ form.login {
       }
     }
     span {
-      padding: 15px 12px;
+      padding: 10px 12px;
       margin: 0 0 0 80px;
       border-radius: 10px;
       background-color: #ddd;
 
       &:nth-of-type(1) {
-        margin-left: 200px;
+        margin-left: 90px;
       }
       &:nth-of-type(2) {
         margin-left: 20px;
@@ -60,5 +60,5 @@ a {
   color: black;
 }
 div.join {
-  justify-content: space-around;
+  justify-content: center;
 }

@@ -5,7 +5,7 @@ block content
     link(rel='stylesheet', href='/css/section.css')
     div
         strong
-            p.name 앵무새
+            p.name= adata.a_name
 
         img(src="/images/animal/앵무새.webp", alt="")
         ul.menu
@@ -22,31 +22,19 @@ block content
                 p#p1 
                 header.header
                     strong 사육조건 
-                | 앵무새를 사육할때 적정 온도는 보통 25~30도
-                br
-                | 습도는 60%정도
-                br 
+                p= adata.a_condition
             article.box2
                 p#p2
                 header.header
                     strong 음식
-                | 과일과 씨앗, 곤충을 먹는 초식 위주의 잡식성이지만 가끔 소형 동물도 먹이가 된다
-                br
-                | 
-                br 
+                p= adata.a_food
             article.box3
                 p#p3 
                 header.header
                     strong 습성
-                | 호기심이 많아 부리로 잘 물어보는 습성이 있다
-                br
-                |
-                br 
+                p= adata.a_habit
             article.box4
                 p#p4
                 header.header 
                     strong 주의사항 
-                | 혹시나 삼킬 수 있으니 작은 플라스틱같은 것들을 가까이 두지 않게 하는게 중요
-                br
-                | 
-                br 
+                p= adata.a_caution

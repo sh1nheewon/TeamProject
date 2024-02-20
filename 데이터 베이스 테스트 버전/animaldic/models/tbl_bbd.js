@@ -13,10 +13,6 @@ export default class tbl_bbd extends Model {
           type: DataTypes.STRING(15),
           allowNull: false,
         },
-        password: {
-          type: DataTypes.STRING(125),
-          allowNull: false,
-        },
         title: {
           type: DataTypes.STRING(150),
           allowNull: false,

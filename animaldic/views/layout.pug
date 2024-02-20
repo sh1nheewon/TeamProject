@@ -5,7 +5,6 @@ html(lang="ko")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta( name='viewport', content='width=device-width, initial-scale=1')
     title= title
-    link(rel='stylesheet', href='/css/check.css')
     //- script(src="https://kit.fontawesome.com/9b331147db.js",crossorigin="anonymous")
     link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.2/css/all.css", integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu", crossorigin="anonymous")
     link(rel='stylesheet', href='/css/home.css')
@@ -22,14 +21,21 @@ html(lang="ko")
         a(href="/freeboard") 자유게시판
           i.fa.fa-comment
       li
-        a(href="/notice") 공지사항
+        a(href="/nwrite") 공지사항
           i.fa.fa-exclamation
-      li
-        a(href="login") 로그인
-          i.fa.fa-user-circle
-      li
-        a(href="/join") 회원가입
-          i.fa.fa-user-plus
+      if user
+        //- li MyPAGE(#{user.m_username})
+        //-   i.fa.fa-address-book
+        li
+          a.logout(href="/logout") 로그아웃
+            i.fa.fa-ban
+      else
+        li
+          a(href="/login") 로그인
+            i.fa.fa-user-circle
+        li
+          a(href="/users/join") 회원가입
+            i.fa.fa-user-plus
     ul.alrim
       li.alrim
         a(href="https://vpet.co.kr/category/%ED%8C%8C%EC%86%90%EC%9C%A0%ED%86%B5%EA%B8%B0%ED%95%9C%EC%9E%84%EB%B0%95/441/" target="new")

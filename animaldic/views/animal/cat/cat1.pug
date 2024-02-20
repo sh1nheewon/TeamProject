@@ -5,7 +5,7 @@ block content
     link(rel='stylesheet', href='/css/section.css')
     div
         strong
-            p.name 강아지
+            p.name= adata.a_name
 
         img(src="/images/dog.jpg", alt="")
         ul.menu
@@ -22,36 +22,19 @@ block content
                 p#p1 
                 header.header
                     strong 사육조건 
-                | 
-                br
-                | 
-                br 
+                p= adata.a_condition
             article.box2
                 p#p2
                 header.header
                     strong 음식
-                | 강아지가 먹으면 안되는 음식 : 초콜릿, 카페인 음료, 포도와 건포도, 과일 씨앗, 아보카도, 
-                | 양파, 마늘, 파, 부추, 유제품, 마카다미아, 자일리톨, 익힌 닭뼈, 사람 약, 염분 있는 음식, 향신료 등.
-                br
-                | 사료와 자연식. 자연식은 신선한 고기와 채소 등. (영양소 균형을 잘 맞춰야함)
-                | 간식 : 영양소보다는 맛에 중점을 둔 경우가 많아 적당하게 급여해야함.
-                br 
+                p= adata.a_food
             article.box3
                 p#p3 
                 header.header
                     strong 습성
-                | 경계심 - 자신과 무리 보호를 위해 위협적인 소리로 경고 및 이빨을 드러냄. 크게 짖기도 함.
-                | 사냥본능 : 산책 및 놀이 활동을 통해 본능을 해소시켜야함. 그렇지 않으면 스트레스를 받게 될 수 있음.
-                | 움직이거나 빠르게 이동하는 물건이나 동물이 있다면 따라가기 위해 갑작스럽게 뛰거나 흥미를 느끼기도 함. 신체와 정신 건강을 유지한다는 장점.
-                br
-                | 서열 : 서열 정리를 위해 싸우기도 함.
-                | 감각 : 후각은 사람보다 1000배~10000배 까지 뛰어나기도 함. 청각도 뛰어나며 귀소 본능을 가지고 있기도 함.
-                br 
+                p= adata.a_habit
             article.box4
                 p#p4
                 header.header 
                     strong 주의사항 
-                | 좋은 성분의 사료 구입. 정기적인 식사 습관. 사람들이 먹는 음식이나 과도한 간식은 X. 백신접종. 전자칩 주입 고려와 중성화 수술 고려.
-                br
-                | 건강 보험에 가입. 털 빗질과 털 깨끗하게 유지. 발톱 다듬기. 충분한 운동시간 제공.
-                br 
+                p= adata.a_caution
