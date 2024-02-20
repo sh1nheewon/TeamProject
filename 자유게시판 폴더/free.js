@@ -2,6 +2,7 @@ import express from "express";
 import DB from "../models/index.js";
 import { upLoad } from "../modules/file_upload.js";
 import { Op } from "sequelize";
+import moment from "moment";
 
 const BBD = DB.models.tbl_bbd;
 const USER = DB.models.tbl_members;
@@ -52,7 +53,7 @@ router.get("/insert", (req, res) => {
 router.post("/insert", upLoad.single("image"), async (req, res) => {
   const username = req.body.author;
   const password = req.body.password;
-  const file = req.file;
+  req.body.date = moment().format("YYYY-MM-DD");
 
   const result = await USER.findByPk(username);
   if (!result) {
@@ -66,10 +67,10 @@ router.post("/insert", upLoad.single("image"), async (req, res) => {
         num = Number(num) + 1;
         req.body.num = num;
       }
-
+      const file = req.file;
       if (file) {
-        req.body.image_name = file.fieldname;
-        req.body.image_origin_name = file.originalname;
+        req.body.image_name = req.file.filename;
+        req.body.image_origin_name = req.file.originalname;
       }
       const bd_data = req.body;
 
@@ -138,6 +139,11 @@ router.post("/:num/update", upLoad.single("image"), async (req, res) => {
       // 사용자명이 일치하는 경우
       if (result.m_password === password) {
         // 비밀번호가 일치하는 경우
+        const file = req.file;
+        if (file) {
+          req.body.image_name = req.file.filename;
+          req.body.image_origin_name = req.file.originalname;
+        }
         const bd_data = req.body;
         try {
           // 게시글을 업데이트합니다.

@@ -11,9 +11,9 @@ block content
           textarea.text(name="content")=bd.content
           div.free
             div.user
-                input.author(type="text" name="author" id="author" value=`${bd.author}`)
+                input.author(type="text" name="author" id="author" value=`${bd.author}` readonly)
                 input.password(type="password" name='password' id='password'  placeholder='PASSWORD')
-                input.image(type="file" name="image" accept="image/*" id="image" value=`${bd.image_name}`)
+                input.image(type="file" name="image" accept="image/*" id="image")
             div.freebutton(data-num=`${bd.num}`)
                 input.btn.repost(type="button" data-num=`${bd.num}` value="재게시")
                 input.btn.btn_list(type="button", value="돌아가기")

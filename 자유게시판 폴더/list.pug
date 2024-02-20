@@ -7,14 +7,13 @@ block list_content
     thead 
       tr
         th No.
-          span.No
         th 제목
-          span.title
         th 글쓴이
-          span.author
+        th 게시일자
     tbody
       each bd,index in BBD
         tr(data-num=`${bd.num}`) 
           td #{index+1}
           td= bd.title
           td= bd.author 
+          td= bd.date
