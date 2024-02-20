@@ -33,6 +33,10 @@ export default class tbl_bbd extends Model {
           type: DataTypes.STRING(255),
           allowNull: true,
         },
+        date: {
+          type: DataTypes.STRING(10),
+          allowNull: false,
+        },
       },
       {
         sequelize,

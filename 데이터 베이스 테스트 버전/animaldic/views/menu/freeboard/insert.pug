@@ -6,7 +6,7 @@ block content
     script(src="/js/freeboard.js") 
     h2.free 자유게시판 글 쓰기
       main
-        form.write(method="POST",enctype="multipart/form-data")
+        form.write(method="POST", enctype="multipart/form-data")
           input(type='text' name="title" placeholder='제목을 입력해주세요.' required='')
           hr
           textarea.text(name="content" placeholder='내용을 입력해주세요.')
@@ -14,7 +14,7 @@ block content
             div.user
                 input(type="text" name="author" placeholder='ID')
                 input(type="password" name='password' placeholder='PASSWORD')
-                input.img_box(type="file",accept="image/*",id="image")
+                input(type="file" accept="image/*" name="image")
             div.freebutton
                 input.btn.btn_post(type="button", value= "게시")
                 input.btn(type="reset", value= "새로 작성")
