@@ -4,7 +4,7 @@ const NOTICE = DB.models.tbl_notice;
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("menu/nwrite");
+  res.render("menu/notice");
 });
 
 export default router;

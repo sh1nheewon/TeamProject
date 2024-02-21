@@ -105,7 +105,9 @@ router.get("/:u_num/check", async (req, res) => {
 router.get("/insert", (req, res) => {
   const user = req.session.user ? req.session.user : undefined;
   if (user) {
-    res.render("menu/home/myanimal");
+    const user = req.session.user ? req.session.user.m_username : undefined;
+    const row = MYANIMAL.findAll({ where: { ma_user: user } }); // 나의 동물정보 사진을 등록해두었으면 보여지게
+    res.render("menu/home/myanimal", { myanimal: row }); // 로그인했으면 동물정보 추가 이동가능
   } else {
     res.redirect("/"); // 로그인안했으면 못들어가게
   }

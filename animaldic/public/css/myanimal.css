@@ -32,3 +32,16 @@ div.myanimalinput {
     }
   }
 }
+div.img_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img.img_add {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hidden {
+  display: none;
+}

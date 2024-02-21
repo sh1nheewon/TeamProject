@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const user = "<%= user %>";
   const form = document.querySelector("form.write");
   const btn_post = form.querySelector("input.btn_post");
   const btn_list = form.querySelector("input.btn_list");
@@ -22,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
       content.select();
       return false;
     }
-    if (!user&&!author?.value) {
+    if (!user && !author.value) {
       alert("아이디를 작성해주세요");
       author.select();
       return false;
     }
-    if (!user && password?.value) {
+    if (!user && password.value) {
       alert("비밀번호를 작성해주세요");
       password.select();
       return false;
