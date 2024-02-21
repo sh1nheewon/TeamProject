@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn_delete = document.querySelectorAll("button.delete i.fa.fa-times");
   btn_delete.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      if (confirm("삭제된 데이터는 복구할 수 없습니다. 정말 삭제할까요?")) {
+      if (confirm("리스트를 삭제하시겠습니까? \n삭제된 리스트는 복구가 불가능합니다")) {
         const target = e.target.closest("ul[data-u_num]");
         const u_num = target.dataset.u_num;
         document.location.replace(`/${u_num}/delete`); // 서버에 해당 번호 삭제 요청

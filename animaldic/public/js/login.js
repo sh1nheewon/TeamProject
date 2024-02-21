@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
     if (target.value === "회원가입") {
-      return (document.location.href = "/join");
+      return (document.location.href = "/users/join");
     }
     if (target.value === "아이디비밀번호찾기") {
       return (document.location.href = "/find");

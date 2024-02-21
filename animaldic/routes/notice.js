@@ -7,4 +7,8 @@ router.get("/", (req, res) => {
   res.render("menu/notice");
 });
 
+router.get("/nwrite", (req, res) => {
+  res.render("menu/nwrite");
+});
+
 export default router;

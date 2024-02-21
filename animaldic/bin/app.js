@@ -65,7 +65,7 @@ app.use((req, res, next) => {
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/freeboard", freeRouter);
-app.use("/nwrite", noticeRouter);
+app.use("/notice", noticeRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
